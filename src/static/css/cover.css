@@ -1,6 +1,11 @@
 /* Imports */
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400');
 
+html{
+    height:100%;
+    max-height: 100%;
+}
+
 /* Global Setttings */
 body {
     font-family: 'Montserrat', sans-serif;
@@ -12,12 +17,12 @@ body {
 div#cover {
     color: #fff;
     text-align: center;
-    background-attachment:fixed;
-    background: no-repeat center center fixed url('../img/header.jpg') #2e4b7a;
+    background: no-repeat center center url('../img/header.jpg') #2e4b7a;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    background-attachment: fixed;
     background-position: center bottom;
 }
 
@@ -25,7 +30,9 @@ div#cover {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
-    height: 100vh;
+    min-height: 100vh;
+    height: 100%;
+    width:100%;
     padding: 0;
     margin: 0;
     text-align: center;
@@ -35,7 +42,7 @@ div#cover {
 #cover-content {
     align-self: center;
     justify-self: center;
-    padding: 2%;
+    padding: 2% 0 2%;
 }
 
 #cover-content>img {
@@ -69,7 +76,6 @@ div#cover {
 ul#skills {
     margin: 0;
     padding: 0;
-    width: 100%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 1em;
@@ -79,13 +85,14 @@ ul#skills {
 
 ul#skills>li {
     padding: 4%;
+    width: 100%;
     align-self: center;
     justify-self: center;
 }
 
 /* Footer */
 #cover-footer {
-    margin:0;
+    margin:1.5em 0 0;
     padding: 0;
 }
 
@@ -169,3 +176,4 @@ a#email:hover {
         max-width: 50%;
     }
 }
+
