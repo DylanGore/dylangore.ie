@@ -60,7 +60,46 @@ main#page-main{
 }
 
 footer#page-footer{
+    font-size: 0.8em;
     background: #213558;
     color:#fff;
     padding: 0 0.5em;
+    text-align: center;
+}
+
+@media screen and (max-width: 767px) {
+    /* Up to Tablet Viewport */
+    header#page-header #navbar{
+        display: grid;
+        grid-template-columns: 80% 20%;
+        align-items: center;
+        height: 65px;
+        color: #fff;
+        background: #2e4b7a;
+    }
+
+    header#page-header nav ul{
+        display: none;
+    }
+
+    header#page-header nav #btn-nav{
+        display: block;
+        justify-self: right;
+        margin-right: 1em;
+    }
+
+    main#page-main{
+        padding: 0 1em;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    /* Tablet Viewport and above */
+    header#page-header nav #btn-nav{
+        display: none;
+    }
+
+    header#page-header nav #btn-nav{
+        display: none;
+    }
 }
