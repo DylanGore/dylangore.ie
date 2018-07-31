@@ -56,7 +56,53 @@ header#page-header #navbar ul li a{
 
 main#page-main{
     padding:1em 2em;
+    height:100%;
     /* background: darkcyan; */
+}
+
+div#projects{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1em;
+}
+
+div#projects article{
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.25);
+    transition: 0.3s;
+}
+
+
+div#projects article div.content{
+    padding:0 0.5em 0.5em 0.5em;
+    margin: 0;
+    height: 100%;
+    padding-bottom: 1em;
+}
+
+div#projects article h3{
+    letter-spacing: 0.1em;
+    margin: 0;
+}
+
+div#projects article p{
+    font-weight: 300;
+}
+
+div#projects article a.btn-project{
+    background-color: #2e4b7a;
+    font-weight: 300;
+    color: #fff;
+    padding: 0.4em;
+    text-decoration: none;
+}
+
+div#projects article a.btn-project:hover{
+    background-color: #243a5e;
+}
+
+div#projects article img{
+    width: 100%;
+    margin: 0;
 }
 
 footer#page-footer{
@@ -90,6 +136,13 @@ footer#page-footer{
 
     main#page-main{
         padding: 0 1em;
+    }
+
+    div#projects{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 1em;
+        margin-bottom: 1em;
     }
 }
 
