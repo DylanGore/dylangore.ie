@@ -86,6 +86,11 @@ div#projects article h3{
 
 div#projects article p{
     font-weight: 300;
+    overflow: hidden;
+    width:100%;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
 }
 
 div#projects article a.btn-project{
