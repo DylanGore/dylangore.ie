@@ -151,6 +151,10 @@ a#email:hover {
     vertical-align: middle;
 }
 
+p#copyright{
+    font-size: 0.8em;
+}
+
 /* Responsive */
 @media screen and (max-width: 767px) {
     /* Up to Tablet Viewport */
