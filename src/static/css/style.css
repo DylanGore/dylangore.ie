@@ -17,6 +17,15 @@ div.wrapper{
     grid-template-columns: 100%;
 }
 
+header#page-header #page-title{
+    color:#fff;
+    text-decoration: none;
+}
+
+header#page-header #page-title:hover{
+    color:#bdbdbd;
+}
+
 header#page-header #navbar{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -93,7 +102,7 @@ div#projects article p{
     -webkit-box-orient: vertical;
 }
 
-div#projects article a.btn-project{
+.btn-project{
     background-color: #2e4b7a;
     font-weight: 300;
     color: #fff;
@@ -101,7 +110,7 @@ div#projects article a.btn-project{
     text-decoration: none;
 }
 
-div#projects article a.btn-project:hover{
+.btn-project:hover{
     background-color: #243a5e;
 }
 

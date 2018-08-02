@@ -1,0 +1,44 @@
+main#page-main{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1em;
+    height: 100%;
+}
+
+main#page-main a#top-arrow{
+    grid-column: 1 / -1;
+    justify-self: left;
+    align-self: center;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    color: #000;
+
+}
+
+main#page-main a#top-arrow:hover{
+    color: #888888;
+
+}
+
+main#page-main img{
+    padding: 0;
+    margin: 0;
+    align-self: center;
+    justify-self: center;
+}
+
+main#page-main div#content{
+    margin: 0;
+    padding: 0;
+    justify-self: center;
+    align-self: center;
+}
+
+main#page-main div#tags{
+    grid-column: 1 / -1;
+    align-self: center;
+    justify-self: center;
+    margin: 0;
+    padding: 0;
+}
