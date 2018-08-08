@@ -1,10 +1,11 @@
 const single = {
-    single(request, response) {
+    single(req, res) {
         const viewData = {
             title: 'Project',
+            user: req.user,
             css: ['style.css','project.css']
         };
-        response.render('project', viewData);
+        res.render('project', viewData);
     },
 };
 

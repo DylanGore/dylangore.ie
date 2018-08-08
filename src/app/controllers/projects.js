@@ -1,10 +1,11 @@
 const directory = {
-    directory(request, response) {
+    directory(req, res) {
         const viewData = {
             title: 'Projects',
+            user: req.user,
             css: ['style.css']
         };
-        response.render('projects', viewData);
+        res.render('projects', viewData);
     },
 };
 

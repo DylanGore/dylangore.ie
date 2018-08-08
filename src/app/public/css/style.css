@@ -127,6 +127,15 @@ footer#page-footer{
     text-align: center;
 }
 
+footer#page-footer .auth-link{
+    color: #fff;
+    text-decoration: none;
+}
+
+footer#page-footer .auth-link:hover{
+    text-decoration: underline;
+}
+
 @media screen and (max-width: 767px) {
     /* Up to Tablet Viewport */
     header#page-header #navbar{
@@ -169,4 +178,12 @@ footer#page-footer{
     header#page-header nav #btn-nav{
         display: none;
     }
+}
+
+.error-message{
+    background-color: #9e3a3a;
+    color: #fff;
+    font-size: 0.8em;
+    padding: 0.4em;
+    margin-bottom: 0.5em;
 }

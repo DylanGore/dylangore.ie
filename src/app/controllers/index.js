@@ -1,10 +1,10 @@
 const index = {
-    index(request, response) {
+    index(req, res) {
         const viewData = {
-            title: 'Home',
+            user: req.user,
             css: ['cover.css']
         };
-        response.render('index', viewData);
+        res.render('index', viewData);
     },
 };
 

@@ -1,0 +1,10 @@
+<footer id="page-footer">
+    <p id="copyright">
+        &copy; Copyright 2018 Dylan Gore |
+        {{#if user}}
+            <a class="auth-link" href="/auth/logout">Logout</a>
+        {{else}}
+            <a class="auth-link" href="/auth/login">Login</a>
+        {{/if}}
+    </p>
+</footer>

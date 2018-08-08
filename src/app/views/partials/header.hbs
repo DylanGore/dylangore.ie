@@ -1,0 +1,21 @@
+<header id="page-header">
+    <nav id="navbar">
+        <a href="/" id="page-title">Dylan Gore</a>
+        <a id="btn-nav">
+            <i class="fas fa-2x fa-bars"></i>
+        </a>
+        <ul>
+            <li>
+                <a href="/">Home</a>
+            </li>
+            <li>
+                <a href="/projects">Projects</a>
+            </li>
+            {{#if user}}
+            <li>
+                <a href="/dashboard">Dashboard</a>
+            </li>
+            {{/if}}
+        </ul>
+    </nav>
+</header>

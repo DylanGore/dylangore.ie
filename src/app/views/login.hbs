@@ -1,0 +1,15 @@
+<div class="wrapper">
+    {{> header}}
+
+    <main id="page-main">
+        <h1>Login</h1>
+        {{#if message}}
+        <span class="error-message">{{message}}</span>
+        {{/if}}
+        <p class="lead">Please log in by choosing one of the providers below.</p>
+        <a class="btn-project" role="button" href="/auth/google">
+            <i class="fab fa-google"></i> Log in with Google</a>
+    </main>
+
+    {{> footer}}
+</div>
