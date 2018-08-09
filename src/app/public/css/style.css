@@ -125,14 +125,27 @@ footer#page-footer{
     color:#fff;
     padding: 0 0.5em;
     text-align: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
 }
 
-footer#page-footer .auth-link{
+footer#page-footer #auth-links{
+    text-align: right;
+    padding: 0 1em;
+}
+
+footer#page-footer #github-link{
+    text-align: left;
+    padding: 0 1em;
+}
+
+footer#page-footer .footer-link{
     color: #fff;
     text-decoration: none;
 }
 
-footer#page-footer .auth-link:hover{
+footer#page-footer .footer-link:hover{
     text-decoration: underline;
 }
 
