@@ -19,4 +19,8 @@ router.get('/', index.index);
 router.get('/projects', projects.directory);
 router.get('/projects/project', project.single);
 
+router.get('/login', (req, res) => {
+    res.redirect('/auth/login');
+});
+
 module.exports = router;
