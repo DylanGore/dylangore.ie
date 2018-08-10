@@ -18,6 +18,14 @@ const authCheck = (req, res, next) => {
 router.get('/', index.index);
 router.get('/projects', projects.directory);
 router.get('/projects/project', project.single);
+router.get('/projects/new', authCheck, (req, res) => {
+    const viewData = {
+      title: 'New Project',
+      user: req.user,
+      css: ['style.css']
+    };
+    res.render('project-new', viewData);
+});
 
 router.get('/login', (req, res) => {
     res.redirect('/auth/login');

@@ -15,7 +15,7 @@ router.get('/', authCheck, (req, res) => {
     const viewData = {
       title: 'Dashboard',
       user: req.user,
-      css: ['style.css']
+      css: ['style.css', 'dashboard.css']
     };
     res.render('dashboard', viewData);
 });

@@ -2,8 +2,47 @@
     {{> header}}
 
     <main id="page-main">
-        <h1>Dashboard</h1>
-        <a href="/auth/logout">Logout</a>
+        <div class="dashboard-wrapper">
+            <div class="dashboard-top">
+                <h1>Dashboard</h1>
+                <ul class="dashboard-links">
+                    <li><a href="/projects/new"><i class="fas fa-plus"></i> New project</a></li>
+                    <li><a href="/auth/logout"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+                </ul>
+            </div>
+            <div class="dashboard-main">
+                <div class="card" id="pages-card">
+                    <h2>Pages <i class="fas fa-file"></i></h2>
+                    <ul>
+                        <li>Page 1</li>
+                        <li>Page 2</li>
+                        <li>Page 3</li>
+                    </ul>
+                </div>
+                <div class="card" id="projects-card">
+                    <h2>Projects <i class="fas fa-project-diagram"></i></h2>
+                    <ul>
+                        <li>Project 1</li>
+                        <li>Project 2</li>
+                        <li>Project 3</li>
+                    </ul>
+                </div>
+                <div class="card" id="media-card">
+                    <h2>Media <i class="fas fa-images"></i></h2>
+                    <ul>
+                        <li><img src="http://via.placeholder.com/100x100?text=Sample" alt="placeholder"></li>
+                        <li><img src="http://via.placeholder.com/100x100?text=Sample" alt="placeholder"></li>
+                        <li><img src="http://via.placeholder.com/100x100?text=Sample" alt="placeholder"></li>
+                    </ul>
+                </div>
+                <div class="card" id="users-card">
+                    <h2>Allowed Users <i class="fas fa-user-circle"></i></h2>
+                    <ul>
+                        <li>Sample User (example@example.com)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </main>
 
     {{> footer}}
