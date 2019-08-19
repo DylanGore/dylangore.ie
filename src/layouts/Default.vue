@@ -2,7 +2,7 @@
     <div id="app" class="wrapper">
         <header id="page-header">
             <nav id="navbar">
-                <a href="index.html" id="page-title">Dylan Gore</a>
+                <router-link to="/" id="page-title">Dylan Gore</router-link>
                 <a id="btn-nav">
                     <i class="fas fa-2x fa-bars"></i>
                 </a>
@@ -12,6 +12,9 @@
                     </li>
                     <li>
                         <router-link to="/projects">Projects</router-link>
+                    </li>
+                    <li>
+                        <router-link to="/contact">Contact</router-link>
                     </li>
                 </ul>
             </nav>

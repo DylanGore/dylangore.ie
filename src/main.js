@@ -5,9 +5,9 @@ import store from './store';
 
 // Layouts
 import Default from './layouts/Default';
-import NoCSS from './layouts/NoCSS';
+import Cover from './layouts/Cover';
 Vue.component('default-layout', Default);
-Vue.component('nocss-layout', NoCSS);
+Vue.component('cover-layout', Cover);
 
 Vue.config.productionTip = false;
 

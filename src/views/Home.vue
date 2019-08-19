@@ -5,76 +5,19 @@
             <h1>Dylan Gore</h1>
             <p>Wexford, Ireland</p>
             <ul id="skills">
-                <li>
-                    <span class="iconify" data-icon="mdi-language-html5"></span> HTML
-                </li>
-                <li>
-                    <span class="iconify" data-icon="mdi-language-css3"></span> CSS
-                </li>
-                <li>
-                    <span class="iconify" data-icon="mdi-language-javascript"></span> JavaScript
-                </li>
-                <li>
-                    <span class="iconify" data-icon="mdi-language-python"></span> Python
-                </li>
-                <li>
-                    <span class="iconify" data-icon="fa-brands:java"></span> Java
-                </li>
-                <li>
-                    <span class="iconify" data-icon="mdi-nodejs"></span> NodeJS
-                </li>
-                <li>
-                    <span class="iconify" data-icon="mdi-vuejs"></span> VueJS
-                </li>
-                <li>
-                    <span class="iconify" data-icon="mdi-database"></span> NoSQL
-                </li>
-                <li>
-                    <span class="iconify" data-icon="mdi-linux"></span> Linux
+                <li v-for="skill in skills">
+                    <span class="iconify" :data-icon="skill.icon"></span>
+                    {{ skill.name }}
                 </li>
             </ul>
             <router-link to="/projects">View Projects</router-link>
         </main>
         <footer id="cover-footer">
             <ul id="links">
-                <li>
-                    <a
-                        href="https://github.com/DylanGore"
-                        target="_blank"
-                        id="github"
-                        title="GitHub"
-                    >
-                        <span class="iconify icon-2x" data-icon="fa-github"></span>
-                    </a>
-                </li>
-                <li>
-                    <a
-                        href="https://twitter.com/DylanGore"
-                        target="_blank"
-                        id="twitter"
-                        title="Twitter"
-                    >
-                        <span class="iconify icon-2x" data-icon="fa-twitter"></span>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://dev.to/DylanGore" target="_blank" id="devto" title="dev.to">
-                        <span class="iconify icon-2x" data-icon="mdi-dev-to"></span>
-                    </a>
-                </li>
-                <li>
-                    <a
-                        href="https://www.linkedin.com/in/dylangore/"
-                        target="_blank"
-                        id="linkedin"
-                        title="LinkedIn"
-                    >
-                        <span class="iconify icon-2x" data-icon="fa-linkedin"></span>
-                    </a>
-                </li>
-                <li>
-                    <a href="mailto:hello@dylangore.ie" id="email" title="E-mail">
-                        <span class="iconify icon-2x" data-icon="mdi-email"></span>
+                <li v-for="link in links">
+                    <!--prettyhtml-ignore-->
+                    <a :href="link.url" :target="link.target" :class="link.class" :title="link.title">
+                        <span class="iconify icon-2x" :data-icon="link.icon"></span>
                     </a>
                 </li>
             </ul>
@@ -85,7 +28,59 @@
 
 <script>
 export default {
-    name: 'home'
+    name: 'home',
+    data() {
+        return {
+            skills: [
+                { name: 'HTML', icon: 'mdi:language-html5' },
+                { name: 'CSS', icon: 'mdi:language-css3' },
+                { name: 'JavaScript', icon: 'mdi:language-javascript' },
+                { name: 'Python', icon: 'mdi:language-python' },
+                { name: 'Java', icon: 'fa-brands:java' },
+                { name: 'NodeJS', icon: 'fa-brands:node' },
+                { name: 'Vue', icon: 'mdi:vuejs' },
+                { name: 'NoSQL', icon: 'mdi:database' },
+                { name: 'Linux', icon: 'fa-brands:linux' }
+            ],
+            links: [
+                {
+                    title: 'Twitter',
+                    class: 'twitter-icon',
+                    icon: 'mdi:twitter',
+                    target: '_blank',
+                    url: 'https://twitter.com/DylanGore'
+                },
+                {
+                    title: 'GitHub',
+                    class: 'github-icon',
+                    icon: 'mdi:github-circle',
+                    target: '_blank',
+                    url: 'https://github.com/DylanGore'
+                },
+                {
+                    title: 'Dev.to',
+                    class: 'devto-icon',
+                    icon: 'mdi:dev-to',
+                    target: '_blank',
+                    url: 'https://dev.to/DylanGore'
+                },
+                {
+                    title: 'LinkedIn',
+                    class: 'linkedin-icon',
+                    icon: 'mdi:linkedin',
+                    target: '_blank',
+                    url: 'https://www.linkedin.com/in/dylangore/'
+                },
+                {
+                    title: 'Email',
+                    class: 'email-icon',
+                    icon: 'mdi:email',
+                    target: '_self',
+                    url: 'mailto:hello@dylangore.ie'
+                }
+            ]
+        };
+    }
 };
 </script>
 
@@ -157,6 +152,7 @@ ul#skills {
     margin: auto;
     padding: 0;
     display: grid;
+    font-size: 0.9em;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 1em;
     list-style-type: none;
@@ -204,30 +200,6 @@ ul#links > li {
     color: #fff;
     padding: 1.2em;
     margin: 0;
-}
-
-#dev-badge {
-    filter: invert(1);
-}
-
-a#github:hover {
-    color: #333;
-}
-
-a#twitter:hover {
-    color: #1da1f2;
-}
-
-a#devto:hover {
-    color: #000;
-}
-
-a#linkedin:hover {
-    color: #0077b5;
-}
-
-a#email:hover {
-    color: #dd5143;
 }
 
 #cover-footer .fa-2x,

@@ -1,6 +1,7 @@
 /* Imports */
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400');
 
+/* Viewport Size */
 body,
 html {
     font-family: 'Montserrat', sans-serif;
@@ -10,7 +11,33 @@ html {
     height: 100%;
 }
 
+/* Icon Size */
 .icon-2x {
     font-size: 2em;
+}
+
+/* Icon Color */
+.github-icon:hover {
+    color: #333 !important;
+    font-weight: bold;
+}
+
+.twitter-icon:hover {
+    color: #1da1f2 !important;
+    font-weight: bold;
+}
+
+.devto-icon:hover {
+    color: #000 !important;
+    font-weight: bold;
+}
+
+.linkedin-icon:hover {
+    color: #0077b5 !important;
+    font-weight: bold;
+}
+
+.email-icon:hover {
+    color: #dd5143 !important;
     font-weight: bold;
 }
