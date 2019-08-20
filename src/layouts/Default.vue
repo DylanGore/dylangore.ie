@@ -1,23 +1,23 @@
 <template>
     <!-- Page is container by .wrapper for CSS Grid support -->
     <div id="app" class="wrapper">
-        <Header />
+        <MainHeader />
         <!-- Main Content -->
         <main id="page-main">
             <router-view></router-view>
         </main>
-        <Footer />
+        <MainFooter />
     </div>
 </template>
 
 <script>
-import Header from '@/components/layout/Header';
-import Footer from '@/components/layout/Footer';
+import MainHeader from '@/components/layout/Header';
+import MainFooter from '@/components/layout/Footer';
 
 export default {
     components: {
-        Header,
-        Footer
+        MainHeader,
+        MainFooter
     }
 };
 </script>

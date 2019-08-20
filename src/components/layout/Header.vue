@@ -15,6 +15,9 @@
                 <li>
                     <router-link to="/contact">Contact</router-link>
                 </li>
+                <li v-if="getUser">
+                    <a @click.prevent="logout" href="#">Logout</a>
+                </li>
             </ul>
         </nav>
     </header>
@@ -22,6 +25,16 @@
 
 <script>
 export default {
-    name: 'header'
+    name: 'mainheader',
+    methods: {
+        logout() {
+            this.$store.dispatch('userLogout');
+        }
+    },
+    computed: {
+        getUser() {
+            return this.$store.getters.user;
+        }
+    }
 };
 </script>
