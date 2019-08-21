@@ -7,6 +7,9 @@ import store from './store';
 import firebase from 'firebase/app';
 import 'firebase/auth';
 import '@/firebase/init';
+import { firestorePlugin } from 'vuefire';
+
+Vue.use(firestorePlugin);
 
 // Layouts
 import Default from './layouts/Default';

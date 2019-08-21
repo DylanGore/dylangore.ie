@@ -29,20 +29,18 @@ let router = new Router({
         {
             path: '/login',
             name: 'login',
+            meta: {
+                requiresGuest: true
+            },
             component: () => import('./views/auth/Login')
         },
         {
-            path: '/register',
-            name: 'register',
-            component: () => import('./views/auth/Register')
-        },
-        {
-            path: '/profile',
-            name: 'profile',
+            path: '/dashboard',
+            name: 'dashboard',
             meta: {
                 requiresAuth: true
             },
-            component: () => import('./views/auth/Profile')
+            component: () => import('./views/Dashboard')
         },
         // 404 Page & Redirect
         { path: '/404', component: () => import('./views/error/NotFound') },

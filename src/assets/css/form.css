@@ -1,7 +1,5 @@
-/* Stylesheet used for the loggin and register pages for form styling */
-
+/* Stylesheet used for general form styling */
 form {
-    width: 35vw;
     display: grid;
     grid-gap: 1em;
 }
@@ -30,12 +28,14 @@ div.inputGroup {
     align-items: center;
 }
 
-div.inputGroup>input {
+div.inputGroup>input,
+div.inputGroup>textarea {
     border: 1px solid #000;
     padding: 0.8em;
 }
 
-div.inputGroup>input:focus {
+div.inputGroup>input:focus,
+div.inputGroup>textarea:focus {
     border: 1px solid #2e4b7a;
     outline: none;
     box-shadow: 0 0 3px #2e4b7a;

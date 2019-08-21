@@ -57,5 +57,15 @@ export default {
 
 <style scoped>
 /* Import form styles */
-@import '../../assets/css/auth.css';
+@import '../../assets/css/form.css';
+
+#loginForm {
+    width: 35vw;
+}
+
+@media screen and (max-width: 767px) {
+    #loginForm {
+        width: 100%;
+    }
+}
 </style>

@@ -31,6 +31,7 @@ export default new Vuex.Store({
     },
     actions: {
         userLogin({ commit }, payload) {
+            // Log user in and navigate to home page
             // prettier-ignore
             firebase.auth().signInWithEmailAndPassword(payload.email, payload.password).then(cred => {
                 commit('setUser', firebase.auth().currentUser);
@@ -41,16 +42,19 @@ export default new Vuex.Store({
             });
         },
         userLogout({ commit }) {
+            // Log user out and navigate to home page
             // prettier-ignore
             firebase.auth().signOut().then(res => {
                 commit('setUser', null);
                 commit('setAuthError', null);
+                router.push({name: 'home'});
             }).catch(err => {
                 commit('setAuthError', err.message);
                 alert(err.message);
             });
         },
         userRegister({ commit }, payload) {
+            // Create user and navigate to home page
             // prettier-ignore
             firebase.auth().createUserWithEmailAndPassword(payload.email,payload.password).then(cred => {
                 commit('setUser', cred.user);

@@ -73,7 +73,11 @@ export default {
 
 <style scoped>
 /* Import form styles */
-@import '../../assets/css/auth.css';
+@import '../../assets/css/form.css';
+
+#registerForm {
+    width: 35vw;
+}
 
 a#backlink {
     justify-self: left;
@@ -86,5 +90,11 @@ a#backlink {
 
 a#backlink:hover {
     color: #888888;
+}
+
+@media screen and (max-width: 767px) {
+    #registerForm {
+        width: 100%;
+    }
 }
 </style>

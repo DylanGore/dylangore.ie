@@ -6,54 +6,11 @@
             the work I have done for clients as a freelance web developer.
         </p>
         <div id="projectList">
-            <article>
-                <img src="../assets/img/projects/leahs-arty-crafts.jpg" alt="Leah's ArtyCrafts" />
+            <article v-for="project in projects">
+                <img :src="project.thumbnailURL" :alt="project.name" />
                 <div class="content">
-                    <h3>Leah's ArtyCrafts E-Commerce Store</h3>
-                    <p>An e-commerce website for a local business using Prestashop.</p>
-                    <router-link to class="btn-project">View</router-link>
-                </div>
-            </article>
-            <article>
-                <img src="../assets/img/projects/st-marys.jpg" alt="St. Mary's Rosslare" />
-                <div class="content">
-                    <h3>St. Mary's Rosslare Website</h3>
-                    <p>A website for a local GAA & Camogie club using WordPress.</p>
-                    <router-link to class="btn-project">View</router-link>
-                </div>
-            </article>
-            <article>
-                <img src="../assets/img/projects/iot-2019.jpg" alt="Connected Car Monitor" />
-                <div class="content">
-                    <h3>Connected Car Monitor</h3>
-                    <p>A car monitoring device using a Raspberry Pi, OBD-II, VueJS, Python and Firebase.</p>
-                    <router-link to class="btn-project">View</router-link>
-                </div>
-            </article>
-            <article>
-                <img src="../assets/img/projects/iris.jpg" alt="Iris" />
-                <div class="content">
-                    <h3>Iris</h3>
-                    <p>
-                        A connected camera with facial recognition based on a Raspberry Pi, OpenCV, Python and
-                        Django.
-                    </p>
-                    <router-link to class="btn-project">View</router-link>
-                </div>
-            </article>
-            <article>
-                <img src="../assets/img/projects/game-central.jpg" alt="Game Central" />
-                <div class="content">
-                    <h3>Game Central Website</h3>
-                    <p>A website for a local corporate hire business using WordPress.</p>
-                    <router-link to class="btn-project">View</router-link>
-                </div>
-            </article>
-            <article>
-                <img src="../assets/img/projects/crazy-carts.jpg" alt="Crazy Carts" />
-                <div class="content">
-                    <h3>Crazy Carts Website</h3>
-                    <p>A website for a local event hire business using WordPress.</p>
+                    <h3>{{project.name}} {{project.type}}</h3>
+                    <p>{{project.summary}}</p>
                     <router-link to class="btn-project">View</router-link>
                 </div>
             </article>
@@ -62,7 +19,17 @@
 </template>
 
 <script>
+import { db } from '@/firebase/init';
+
 export default {
-    name: 'projects'
+    name: 'projects',
+    data() {
+        return {
+            projects: []
+        };
+    },
+    firestore: {
+        projects: db.collection('projects')
+    }
 };
 </script>
