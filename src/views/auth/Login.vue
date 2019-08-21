@@ -63,7 +63,7 @@ export default {
     width: 35vw;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 790px) {
     #loginForm {
         width: 100%;
     }

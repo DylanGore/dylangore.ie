@@ -56,7 +56,7 @@ input[type='submit']:hover {
     cursor: pointer;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 790px) {
     form {
         width: 100%;
         grid-gap: 0em;

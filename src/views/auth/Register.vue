@@ -92,7 +92,7 @@ a#backlink:hover {
     color: #888888;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 790px) {
     #registerForm {
         width: 100%;
     }

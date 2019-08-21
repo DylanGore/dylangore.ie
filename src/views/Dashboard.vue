@@ -37,7 +37,7 @@ export default {
     padding: 0 1em;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 790px) {
     #dashboard-cards {
         grid-template-columns: 1fr;
         margin-bottom: 1em;

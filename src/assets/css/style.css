@@ -20,9 +20,9 @@ header#page-header #page-title:hover {
 
 header#page-header #navbar {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr 2fr;
     align-items: center;
-    height: 65px;
+    min-height: 65px;
     color: #fff;
     background: #2e4b7a;
 }
@@ -35,23 +35,38 @@ header#page-header #navbar #page-title {
     font-weight: 300;
 }
 
-header#page-header #navbar ul {
+header#page-header #navbar ul#mainNav {
     overflow: hidden;
     list-style-type: none;
     justify-self: right;
 }
 
-header#page-header #navbar ul li {
+header#page-header #navbar ul#mainNav li {
     float: left;
     text-transform: uppercase;
     letter-spacing: 0.1em;
     /* background: cadetblue; */
 }
 
-header#page-header #navbar ul li a {
+header#page-header #navbar ul#mainNav li a {
     text-decoration: none;
     padding: 2em;
     margin: auto 0.5em;
+    color: #fff;
+}
+
+#mobileNav {
+    grid-column: 1 / -1;
+    text-align: center;
+    display: none;
+    padding: 1em 0;
+    margin: 0;
+    width: 100%;
+    list-style-type: none;
+}
+
+#mobileNav li a {
+    text-decoration: none;
     color: #fff;
 }
 
@@ -119,19 +134,20 @@ footer#page-footer {
     text-align: center;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 790px) {
 
     /* Up to Tablet Viewport */
     header#page-header #navbar {
         display: grid;
         grid-template-columns: 80% 20%;
         align-items: center;
-        height: 65px;
         color: #fff;
         background: #2e4b7a;
+        max-height: auto;
+        min-height: 65px;
     }
 
-    header#page-header nav ul {
+    header#page-header nav ul#mainNav {
         display: none;
     }
 
@@ -139,6 +155,16 @@ footer#page-footer {
         display: block;
         justify-self: right;
         margin-right: 1em;
+    }
+
+    ul#mobileNav {
+        display: grid;
+        grid-template-columns: 1fr;
+        height: 100%;
+        grid-gap: 0.5em;
+        justify-items: center;
+        align-items: center;
+        text-align: center;
     }
 
     main#page-main {
@@ -153,13 +179,9 @@ footer#page-footer {
     }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 790px) {
 
     /* Tablet Viewport and above */
-    header#page-header nav #btn-nav {
-        display: none;
-    }
-
     header#page-header nav #btn-nav {
         display: none;
     }

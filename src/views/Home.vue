@@ -212,7 +212,7 @@ p#copyright {
 }
 
 /* Responsive */
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 790px) {
     /* Up to Tablet Viewport */
     ul#skills {
         grid-template-columns: repeat(2, 1fr);
@@ -229,7 +229,7 @@ p#copyright {
     }
 }
 
-@media screen and (min-width: 426px) {
+@media screen and (min-width: 790px) {
     /* Larger than Mobile-L */
     ul#links {
         margin: 0 auto;
