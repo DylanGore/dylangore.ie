@@ -46,9 +46,9 @@
                 <input type="url" name="projectURL" id="projectURL" v-model="projectURL" />
             </div>
             <div class="inputGroup">
-                <label for="showMessage">Show message?</label>
-                <!-- prettier-ignore -->
-                <input type="checkbox" name="showMessage" id="showMessage" v-model="showMessage" />
+                <label for="message">Message:</label>
+                <!-- prettier-ignore prettyhtml-ignore -->
+                <textarea name="message" id="message" v-model="projMessage" rows="2" />
             </div>
             <input type="submit" value="Add Project" />
         </form>
@@ -57,7 +57,7 @@
 
 <script>
 import slugify from 'slugify';
-import { db, storage } from '@/firebase/init';
+import { db, storage, Timestamp } from '@/firebase/init';
 
 export default {
     name: 'addProject',
@@ -75,7 +75,7 @@ export default {
             sourceURL: null,
             docsURL: null,
             projectURL: null,
-            showMessage: false
+            projMessage: null
         };
     },
     methods: {
@@ -115,7 +115,8 @@ export default {
                                 sourceURL: this.sourceURL,
                                 docsURL: this.docsURL,
                                 projectURL: this.projectURL,
-                                showMessage: this.showMessage
+                                message: this.projMessage,
+                                created: Timestamp.now()
                             });
 
                             // Reset form data
@@ -128,7 +129,7 @@ export default {
                             this.sourceURL = null;
                             this.docsURL = null;
                             this.projectURL = null;
-                            this.showMessage = null;
+                            this.projMessage = null;
                             // Reset file selection
                             this.selectedFile = null;
                             document.getElementById("thumbnail").value = "";
@@ -165,9 +166,5 @@ export default {
     -webkit-appearance: none;
     appearance: none;
     width: 100%;
-}
-
-#showMessage {
-    justify-self: left;
 }
 </style>

@@ -5,6 +5,10 @@
             <li class="projectItem" v-for="project in projects">
                 <p>{{project.name}}</p>
                 <!-- prettier-ignore prettyhtml-ignore -->
+                <router-link class="btnView" :to="'/projects/' + project.id" tag="button">
+                    View
+                    <span class="iconify" data-icon="mdi:folder-open"></span>
+                </router-link>
                 <button class="btnEdit">
                     Edit
                     <span class="iconify" data-icon="mdi:pencil"></span>
@@ -49,7 +53,7 @@ export default {
         }
     },
     firestore: {
-        projects: db.collection('projects')
+        projects: db.collection('projects').orderBy('created', 'desc')
     }
 };
 </script>
@@ -66,6 +70,13 @@ export default {
     border: none;
     cursor: pointer;
     color: #fff !important;
+}
+
+.btnView {
+    background: #05747c;
+}
+.btnView:hover {
+    background: #056168 !important;
 }
 
 .btnEdit {
@@ -86,7 +97,7 @@ export default {
     padding-left: 1em;
     margin-bottom: 0.25em;
     display: grid;
-    grid-template-columns: 3fr 1fr 1fr;
+    grid-template-columns: 3fr 1fr 1fr 1fr;
     justify-self: center;
     align-self: center;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);

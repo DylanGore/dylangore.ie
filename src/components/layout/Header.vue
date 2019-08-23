@@ -20,7 +20,14 @@
                     <router-link to="/contact">Contact</router-link>
                 </li>
                 <li @click="toggleNav" v-if="getUser">
-                    <a @click.prevent="logout" href="#">Logout</a>
+                    <router-link to="/dashboard">
+                        <span class="iconify" data-icon="mdi:view-dashboard"></span>
+                    </router-link>
+                </li>
+                <li @click="toggleNav" v-if="getUser">
+                    <a @click.prevent="logout" href="#">
+                        <span class="iconify" data-icon="mdi:logout-variant"></span>
+                    </a>
                 </li>
             </ul>
         </nav>
@@ -51,15 +58,15 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .navbar {
     background: var(--blue);
     color: #fff;
     min-height: 65px;
     width: 100%;
     display: grid;
-    grid-template-columns: 1fr 2fr;
-    grid-template-rows: 1fr, minmax(65px, auto);
+    grid-template-columns: 2fr 1fr;
+    /* grid-template-rows: 1fr, minmax(65px, auto); */
     align-items: center;
     z-index: 999;
 }
@@ -126,11 +133,6 @@ export default {
 @media screen and (min-width: 790px) {
     .nav-toggle-label {
         display: none;
-    }
-
-    .navbar {
-        display: grid;
-        grid-template-columns: 1fr 2fr;
     }
 
     .navbar nav {

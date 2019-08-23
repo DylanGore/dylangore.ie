@@ -29,7 +29,7 @@ export default {
         };
     },
     firestore: {
-        projects: db.collection('projects')
+        projects: db.collection('projects').orderBy('created', 'desc')
     }
 };
 </script>

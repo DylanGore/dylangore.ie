@@ -35,7 +35,7 @@ export default new Vuex.Store({
             auth.signInWithEmailAndPassword(payload.email, payload.password).then(cred => {
                 commit('setUser', auth.currentUser);
                 commit('setAuthError', null);
-                router.push({name: 'home'});
+                router.push({name: 'dashboard'});
             }).catch(err => {
                 commit('setAuthError', err.message);
             });
@@ -60,7 +60,7 @@ export default new Vuex.Store({
                 commit('setAuthError', null);
 
                 // Redirect to homepage
-                router.push({name: 'home'});
+                router.push({name: 'dashboard'});
 
             }).catch(err => {
                 commit('setAuthError', err.message);

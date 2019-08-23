@@ -32,7 +32,7 @@ export default {
 }
 
 #dashboard-cards > div {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.25);
     transition: 0.3s;
     padding: 0 1em;
 }

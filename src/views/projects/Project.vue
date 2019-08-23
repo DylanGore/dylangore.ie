@@ -20,7 +20,7 @@
                 <span class="iconify" data-icon="mdi:earth"></span>
                 View Project
             </a>
-            <span v-if="project.showMessage">message</span>
+            <span v-if="project.message">{{ project.message }}</span>
         </div>
         <!-- <div id="tags"></div> -->
     </div>
