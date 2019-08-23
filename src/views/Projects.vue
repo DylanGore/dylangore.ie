@@ -11,7 +11,7 @@
                 <div class="content">
                     <h3>{{ project.name }} {{ project.type }}</h3>
                     <p>{{ project.summary }}</p>
-                    <router-link to class="btn-project">View</router-link>
+                    <router-link :to="'/projects/' + project.id" class="btn-project">View</router-link>
                 </div>
             </article>
         </div>
@@ -43,7 +43,7 @@ div#projectList {
 
 div#projectList article {
     box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.25);
-    animation: fadein 2s;
+    animation: fadein 1s;
 }
 
 div#projectList article div.content {

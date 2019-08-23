@@ -22,6 +22,11 @@ let router = new Router({
             component: () => import('./views/Projects')
         },
         {
+            path: '/projects/:id',
+            name: 'project',
+            component: () => import('./views/projects/Project')
+        },
+        {
             path: '/contact',
             name: 'contact',
             component: () => import('./views/Contact')
