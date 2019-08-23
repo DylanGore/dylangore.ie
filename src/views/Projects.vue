@@ -43,7 +43,7 @@ div#projectList {
 
 div#projectList article {
     box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.25);
-    transition: 0.3s;
+    animation: fadein 2s;
 }
 
 div#projectList article div.content {
@@ -70,5 +70,28 @@ div#projectList article p {
 div#projectList article img {
     width: 100%;
     margin: 0;
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 790px) {
+    /* Up to Tablet Viewport */
+    main#page-main {
+        padding: 0 1em;
+    }
+
+    div#projectList {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 1em;
+        margin-bottom: 1em;
+    }
 }
 </style>

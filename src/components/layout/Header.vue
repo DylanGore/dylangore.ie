@@ -97,6 +97,7 @@ export default {
     min-height: 65px;
     display: grid;
     align-items: center;
+    cursor: pointer;
 }
 
 .navbar nav {

@@ -5,6 +5,7 @@
       "firebase.json",
       "**/.*",
       "**/.env",
+      "**/report.html",
       "**/node_modules/**"
     ],
     "rewrites": [{

@@ -3,8 +3,7 @@ import Vuex from 'vuex';
 import router from '@/router';
 
 // Import Firebase
-import firebase from 'firebase/app';
-import 'firebase/auth';
+import { auth } from '@/firebase/init';
 
 Vue.use(Vuex);
 
@@ -33,8 +32,8 @@ export default new Vuex.Store({
         userLogin({ commit }, payload) {
             // Log user in and navigate to home page
             // prettier-ignore
-            firebase.auth().signInWithEmailAndPassword(payload.email, payload.password).then(cred => {
-                commit('setUser', firebase.auth().currentUser);
+            auth.signInWithEmailAndPassword(payload.email, payload.password).then(cred => {
+                commit('setUser', auth.currentUser);
                 commit('setAuthError', null);
                 router.push({name: 'home'});
             }).catch(err => {
@@ -44,7 +43,7 @@ export default new Vuex.Store({
         userLogout({ commit }) {
             // Log user out and navigate to home page
             // prettier-ignore
-            firebase.auth().signOut().then(res => {
+            auth.signOut().then(res => {
                 commit('setUser', null);
                 commit('setAuthError', null);
                 router.push({name: 'home'});
@@ -56,7 +55,7 @@ export default new Vuex.Store({
         userRegister({ commit }, payload) {
             // Create user and navigate to home page
             // prettier-ignore
-            firebase.auth().createUserWithEmailAndPassword(payload.email,payload.password).then(cred => {
+            auth.createUserWithEmailAndPassword(payload.email,payload.password).then(cred => {
                 commit('setUser', cred.user);
                 commit('setAuthError', null);
 
