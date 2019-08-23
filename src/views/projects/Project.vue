@@ -1,5 +1,5 @@
 <template>
-    <div id="project" class="project">
+    <div id="project" class="project" v-if="project">
         <router-link to="/projects" class="top-arrow">
             <span class="iconify" data-icon="fa:arrow-left"></span> Back to projects list
         </router-link>
