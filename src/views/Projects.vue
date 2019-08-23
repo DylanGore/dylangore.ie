@@ -10,7 +10,7 @@
                 <img :src="project.thumbnailURL" :alt="project.name" />
                 <div class="content">
                     <h3>{{ project.name }} {{ project.type }}</h3>
-                    <p>{{ project.summary }}</p>
+                    <p class="projSumm">{{ project.summary }}</p>
                     <router-link :to="'/projects/' + project.id" class="btn-project">View</router-link>
                 </div>
             </article>
@@ -79,6 +79,10 @@ div#projectList article img {
     to {
         opacity: 1;
     }
+}
+
+.projSumm {
+    white-space: pre-line;
 }
 
 @media screen and (max-width: 790px) {
