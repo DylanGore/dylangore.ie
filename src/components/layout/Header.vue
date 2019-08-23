@@ -6,6 +6,7 @@
         <label for="nav-toggle" class="nav-toggle-label">
             <span class="iconify icon-2x" data-icon="mdi:menu"></span>
         </label>
+        <!-- prettier-ignore -->
         <input type="checkbox" id="nav-toggle" class="nav-toggle" :checked="showNav" />
         <nav class="navbar-nav">
             <ul>

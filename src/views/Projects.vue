@@ -6,11 +6,11 @@
             the work I have done for clients as a freelance web developer.
         </p>
         <div id="projectList">
-            <article v-for="project in projects">
+            <article v-for="(project, index) in projects" :key="index">
                 <img :src="project.thumbnailURL" :alt="project.name" />
                 <div class="content">
-                    <h3>{{project.name}} {{project.type}}</h3>
-                    <p>{{project.summary}}</p>
+                    <h3>{{ project.name }} {{ project.type }}</h3>
+                    <p>{{ project.summary }}</p>
                     <router-link to class="btn-project">View</router-link>
                 </div>
             </article>
@@ -33,3 +33,42 @@ export default {
     }
 };
 </script>
+
+<style scoped>
+div#projectList {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1em;
+}
+
+div#projectList article {
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.25);
+    transition: 0.3s;
+}
+
+div#projectList article div.content {
+    padding: 0 0.5em 0.5em 0.5em;
+    margin: 0;
+    height: 100%;
+    padding-bottom: 1em;
+}
+
+div#projectList article h3 {
+    letter-spacing: 0.1em;
+    margin: 0;
+}
+
+div#projectList article p {
+    font-weight: 300;
+    overflow: hidden;
+    width: 100%;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+div#projectList article img {
+    width: 100%;
+    margin: 0;
+}
+</style>

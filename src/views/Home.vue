@@ -5,7 +5,7 @@
             <h1>Dylan Gore</h1>
             <p>Wexford, Ireland</p>
             <ul id="skills">
-                <li v-for="skill in skills">
+                <li v-for="(skil, index) in skills" :key="index">
                     <span class="iconify" :data-icon="skill.icon"></span>
                     {{ skill.name }}
                 </li>
@@ -14,9 +14,10 @@
         </main>
         <footer id="cover-footer">
             <ul id="links">
-                <li v-for="link in links">
+                <li v-for="(link, index) in link" :key="index">
                     <!--prettyhtml-ignore-->
                     <a :href="link.url" :target="link.target" :class="link.class" :title="link.title">
+                        <!-- prettier-ignore -->
                         <span class="iconify icon-2x" :data-icon="link.icon"></span>
                     </a>
                 </li>
