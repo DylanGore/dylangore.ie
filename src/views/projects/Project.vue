@@ -8,15 +8,15 @@
             <h1>{{ project.name }}</h1>
             <p class="projDesc">{{ project.description }}</p>
             <!-- prettier-ignore -->
-            <a :href="project.sourceURL" class="btn-project" v-if="project.sourceURL">
+            <a :href="project.sourceURL" class="btn-project" target="_blank" v-if="project.sourceURL">
                 <span class="iconify" data-icon="mdi:github-circle"></span>
                 View Source
             </a>
-            <a :href="project.docsURL" class="btn-project" v-if="project.docsURL">
+            <a :href="project.docsURL" class="btn-project" target="_blank" v-if="project.docsURL">
                 <span class="iconify" data-icon="mdi:document"></span>
                 View Documentation
             </a>
-            <a :href="project.projectURL" class="btn-project" v-if="project.projectURL">
+            <a :href="project.projectURL" class="btn-project" target="_blank" v-if="project.projectURL">
                 <span class="iconify" data-icon="mdi:earth"></span>
                 View Project
             </a>
