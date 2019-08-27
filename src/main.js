@@ -4,9 +4,7 @@ import router from './router';
 import store from './store';
 
 //Firebase
-import firebase from 'firebase/app';
-import 'firebase/auth';
-import '@/firebase/init';
+import { auth } from '@/firebase/init';
 import { firestorePlugin } from 'vuefire';
 
 Vue.use(firestorePlugin);
@@ -22,7 +20,7 @@ Vue.config.productionTip = false;
 let app = null;
 
 // Firebase authentication check
-firebase.auth().onAuthStateChanged(user => {
+auth.onAuthStateChanged(user => {
     // Initialize app if not created
     if (!app) {
         app = new Vue({

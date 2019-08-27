@@ -32,7 +32,7 @@ export default new Vuex.Store({
         userLogin({ commit }, payload) {
             // Log user in and navigate to home page
             // prettier-ignore
-            auth.signInWithEmailAndPassword(payload.email, payload.password).then(cred => {
+            auth.signInWithEmailAndPassword(payload.email, payload.password).then(() => {
                 commit('setUser', auth.currentUser);
                 commit('setAuthError', null);
                 router.push({name: 'dashboard'});
@@ -43,7 +43,7 @@ export default new Vuex.Store({
         userLogout({ commit }) {
             // Log user out and navigate to home page
             // prettier-ignore
-            auth.signOut().then(res => {
+            auth.signOut().then(() => {
                 commit('setUser', null);
                 commit('setAuthError', null);
                 router.push({name: 'home'});

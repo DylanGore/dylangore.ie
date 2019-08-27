@@ -1,8 +1,7 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 
-import firebase from 'firebase/app';
-import 'firebase/auth';
+import { auth } from '@/firebase/init';
 
 Vue.use(Router);
 
@@ -57,7 +56,7 @@ let router = new Router({
 router.beforeEach((to, from, next) => {
     if (to.matched.some(rec => rec.meta.requiresAuth)) {
         // Check user authentication state
-        let user = firebase.auth().currentUser;
+        let user = auth.currentUser;
         if (user) {
             // User is logged in
             next();
@@ -74,7 +73,7 @@ router.beforeEach((to, from, next) => {
 router.beforeEach((to, from, next) => {
     if (to.matched.some(rec => rec.meta.requiresGuest)) {
         // Check user authentication state
-        let user = firebase.auth().currentUser;
+        let user = auth.currentUser;
         if (!user) {
             // User is logged out
             next();
