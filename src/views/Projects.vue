@@ -7,11 +7,14 @@
         </p>
         <div id="projectList">
             <article v-for="(project, index) in projects" :key="index">
-                <img :src="project.thumbnailURL" :alt="project.name" />
-                <div class="content">
-                    <h3>{{ project.name }} {{ project.type }}</h3>
-                    <p class="projSumm">{{ project.summary }}</p>
-                    <router-link :to="'/projects/' + project.id" class="btn-project">View</router-link>
+                <div v-if="project.hidden != true">
+                    <img :src="project.thumbnailURL" :alt="project.name" />
+                    <div class="content">
+                        <h3>{{ project.name }} {{ project.type }}</h3>
+                        <p class="projSumm">{{ project.summary }}</p>
+                        <!-- prettier-ignore -->
+                        <router-link :to="'/projects/' + project.id" class="btn-project">View</router-link>
+                    </div>
                 </div>
             </article>
         </div>
@@ -29,7 +32,8 @@ export default {
         };
     },
     firestore: {
-        projects: db.collection('projects').orderBy('created', 'desc')
+        // prettier-ignore
+        projects: db.collection('projects').where('hidden', '==', false).orderBy('created', 'desc')
     }
 };
 </script>

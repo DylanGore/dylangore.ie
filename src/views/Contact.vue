@@ -3,7 +3,8 @@
         <h1>Contact</h1>
         <h2>Social Media</h2>
         <ul id="contactLinks">
-            <li v-for="link in links">
+            <li v-for="(link, index) in links" :key="index">
+                <!-- prettier-ignore -->
                 <a :href="link.url" :class="link.class" :target="link.target" :title="link.title">
                     <span class="iconify" :data-icon="link.icon"></span>
                     {{ link.title }}

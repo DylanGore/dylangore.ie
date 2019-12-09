@@ -8,7 +8,14 @@
             <div class="inputGroup">
                 <label for="name">Project Name:</label>
                 <!-- prettier-ignore prettyhtml-ignore -->
-                <input type="text" name="name" id="name" v-model="name" :disabled="selectedFile" required />
+                <input
+                    type="text"
+                    name="name"
+                    id="name"
+                    v-model="name"
+                    :disabled="selectedFile"
+                    required
+                />
             </div>
             <div class="inputGroup">
                 <label for="name">Project Type:</label>
@@ -18,17 +25,36 @@
             <div class="inputGroup">
                 <label for="thumbnail">Thumbnail:</label>
                 <!-- prettier-ignore prettyhtml-ignore -->
-                <input type="file" name="thumbnail" id="thumbnail" @change="onFileSelected" :disabled="!name" required />
+                <input
+                    type="file"
+                    name="thumbnail"
+                    id="thumbnail"
+                    @change="onFileSelected"
+                    :disabled="!name"
+                    required
+                />
             </div>
             <div class="inputGroup">
                 <label for="summary">Summary:</label>
                 <!-- prettier-ignore prettyhtml-ignore -->
-                <textarea name="summary" id="summary" v-model="summary" rows="2" required />
+                <textarea
+                    name="summary"
+                    id="summary"
+                    v-model="summary"
+                    rows="2"
+                    required
+                />
             </div>
             <div class="inputGroup">
                 <label for="description">Description:</label>
                 <!-- prettier-ignore prettyhtml-ignore -->
-                <textarea name="description" id="description" v-model="description" rows="3" required />
+                <textarea
+                    name="description"
+                    id="description"
+                    v-model="description"
+                    rows="3"
+                    required
+                />
             </div>
             <div class="inputGroup">
                 <label for="sourceURL">Source URL:</label>
@@ -48,7 +74,16 @@
             <div class="inputGroup">
                 <label for="message">Message:</label>
                 <!-- prettier-ignore prettyhtml-ignore -->
-                <textarea name="message" id="message" v-model="projMessage" rows="2" />
+                <textarea
+                    name="message"
+                    id="message"
+                    v-model="projMessage"
+                    rows="2"
+                />
+            </div>
+            <div class="inputGroup">
+                <label for="hidden">Hide Project: </label>
+                <input type="checkbox" id="hidden" v-model="hidden" />
             </div>
             <input type="submit" value="Add Project" />
         </form>
@@ -75,7 +110,8 @@ export default {
             sourceURL: null,
             docsURL: null,
             projectURL: null,
-            projMessage: null
+            projMessage: null,
+            hidden: false
         };
     },
     methods: {
@@ -116,7 +152,8 @@ export default {
                                 docsURL: this.docsURL,
                                 projectURL: this.projectURL,
                                 message: this.projMessage,
-                                created: Timestamp.now()
+                                created: Timestamp.now(),
+                                hidden: this.hidden
                             });
 
                             // Reset form data
@@ -130,6 +167,7 @@ export default {
                             this.docsURL = null;
                             this.projectURL = null;
                             this.projMessage = null;
+                            this.hidden = false;
                             // Reset file selection
                             this.selectedFile = null;
                             document.getElementById("thumbnail").value = "";
