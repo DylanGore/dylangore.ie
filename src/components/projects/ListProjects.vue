@@ -2,7 +2,7 @@
     <div id="listProjects">
         <h2>All Projects ({{projects.length}})</h2>
         <ul v-if="projects.length">
-            <li class="projectItem" v-for="project in projects">
+            <li class="projectItem" v-for="(project, index) in projects" :key="index">
                 <p>{{project.name}}</p>
                 <!-- prettier-ignore prettyhtml-ignore -->
                 <router-link class="btnView" :to="'/projects/' + project.id" tag="button">
