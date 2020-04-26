@@ -1,0 +1,310 @@
+html,
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+}
+
+div.wrapper {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 100%;
+    min-height: 100%;
+}
+
+main#page-main {
+    padding: 1em 2em;
+}
+
+.btn-project {
+    background-color: #2e4b7a;
+    font-weight: 300;
+    color: #fff;
+    padding: 0.4em;
+    text-decoration: none;
+}
+
+.btn-project:hover {
+    background-color: #243a5e;
+}
+
+footer#page-footer {
+    font-size: 0.8em;
+    background: #213558;
+    color: #fff;
+    padding: 0 0.5em;
+    text-align: center;
+}
+
+/* Mavbar */
+.navbar {
+    background: #2e4b7a;
+    color: #fff;
+    min-height: 65px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    /* grid-template-rows: 1fr, minmax(65px, auto); */
+    align-items: center;
+    z-index: 999;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none !important;
+}
+
+.navbar a:hover {
+    color: #d0d0d0;
+}
+
+.navbar .brand {
+    margin-left: 1em;
+    justify-self: left;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-weight: 300;
+}
+
+/* Hide checkbox */
+.nav-toggle {
+    display: none;
+}
+
+.nav-toggle:checked~nav {
+    transform: scale(1, 1);
+}
+
+.nav-toggle-label {
+    justify-self: right;
+    margin-right: 1em;
+    min-height: 65px;
+    display: grid;
+    align-items: center;
+    cursor: pointer;
+}
+
+.navbar nav {
+    background: #2e4b7a;
+    position: absolute;
+    top: 65px;
+    width: 100%;
+    transform: scale(1, 0);
+    transition: transform 200ms ease-in-out;
+    transform-origin: top;
+}
+
+.navbar nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar nav ul li {
+    text-align: right;
+    padding: 0.5em 0;
+    margin-right: 1em;
+}
+
+/* Desktop Viewport */
+@media screen and (min-width: 790px) {
+    .nav-toggle-label {
+        display: none;
+    }
+
+    .navbar nav {
+        display: grid;
+        transform: scale(1, 1);
+        position: relative;
+        top: 0;
+        transition: none;
+    }
+
+    .navbar nav ul {
+        overflow: hidden;
+        justify-self: right;
+    }
+
+    .navbar nav ul li {
+        float: left;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        margin-left: 0.5em;
+    }
+}
+
+/* Project List */
+div#projectList {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1em;
+}
+
+div#projectList article {
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.25);
+    animation: fadein 1s;
+}
+
+div#projectList article div.content {
+    padding: 0 0.5em 0.5em 0.5em;
+    margin: 0;
+    height: 100%;
+    padding-bottom: 1em;
+}
+
+div#projectList article h3 {
+    letter-spacing: 0.1em;
+    margin: 0;
+}
+
+div#projectList article p {
+    font-weight: 300;
+    overflow: hidden;
+    width: 100%;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+div#projectList article img {
+    width: 100%;
+    margin: 0;
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.projSumm {
+    white-space: pre-line;
+}
+
+@media screen and (max-width: 790px) {
+
+    /* Up to Tablet Viewport */
+    main#page-main {
+        padding: 0 1em;
+    }
+
+    div#projectList {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 1em;
+        margin-bottom: 1em;
+    }
+}
+
+/* Project - single */
+.project {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: min-content;
+    grid-gap: 1em;
+}
+
+.project .btn-project {
+    margin: 0.25em;
+}
+
+.top-arrow {
+    grid-column: 1 / -1;
+    justify-self: left;
+    align-self: center;
+    margin: 0;
+    padding: 2em;
+    text-decoration: none;
+    color: #000;
+}
+
+.top-arrow:hover {
+    color: #888888;
+}
+
+.editButton {
+    grid-column: 1 / -1;
+    justify-self: right;
+    align-self: center;
+    margin: 0;
+    padding: 2em;
+    text-decoration: none;
+    color: #000;
+}
+
+.editButton:hover {
+    color: #888888;
+}
+
+.project img {
+    padding: 0;
+    margin: 0;
+    align-self: center;
+    justify-self: center;
+    width: 80%;
+}
+
+.project #content {
+    margin: 0;
+    padding: 0;
+    justify-self: center;
+    align-self: center;
+}
+
+.project #tags {
+    grid-column: 1 / -1;
+    align-self: center;
+    justify-self: center;
+    margin: 0;
+    padding: 1em;
+}
+
+.projMessage {
+    font-style: italic;
+    font-weight: 300;
+    white-space: pre-line;
+}
+
+.projDesc {
+    white-space: pre-line;
+}
+
+@media screen and (max-width: 790px) {
+    .project {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-auto-rows: min-content;
+        padding-top: 1em;
+        grid-gap: 0;
+    }
+
+    .project .top-arrow {
+        margin: 0 0 1em;
+        padding: 0;
+        justify-self: left;
+        align-self: center;
+    }
+
+    .project .editButton {
+        margin: 0 0 1em;
+        padding: 0;
+        justify-self: right;
+        align-self: center;
+    }
+
+    .project img {
+        width: 100%;
+    }
+
+    .project h1 {
+        margin: 0;
+        margin-top: 0.5em;
+    }
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>{{ .Title }}</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+
+    <link rel="stylesheet" href="{{ "css/main.css" | absURL }}">
+    <script src="https://code.iconify.design/1/1.0.6/iconify.min.js"></script>
+
+    {{ with .OutputFormats.Get "RSS" }}
+    <link href="{{ .RelPermalink }}" rel="alternate" type="{{ .MediaType.Type }}" title="{{ $.Site.Title }}" />
+    <link href="{{ .RelPermalink }}" rel="feed" type="{{ .MediaType.Type }}" title="{{ $.Site.Title }}" />
+    {{ end }}
+
+    {{ if .Site.GoogleAnalytics }}
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ .Site.GoogleAnalytics }}"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments)
+        };
+        gtag('js', new Date());
+        gtag('config', '{{ .Site.GoogleAnalytics }}');
+    </script>
+    {{ end }}
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="navbar">
+            <span class="brand">
+                <a href="{{.Site.BaseURL }}" id="page-title">Dylan Gore</a>
+            </span>
+            <label for="nav-toggle" class="nav-toggle-label">
+                <span class="iconify icon-2x" data-icon="mdi:menu"></span>
+            </label>
+            <!-- prettier-ignore -->
+            <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+            <nav class="navbar-nav">
+                {{ if .Site.Menus.main }}
+                <ul class="nav navbar-nav">
+                    {{ range sort .Site.Menus.main }}
+                    <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+                    {{ end }}
+                </ul>
+                {{ end }}
+            </nav>
+        </header>

@@ -1,0 +1,31 @@
+{{ partial "header" . }}
+
+<main id="page-main">
+
+    <h1>{{ .Title }}</h1>
+    <p>
+        A showcase of some of my own personal projects as well as some of
+        the work I have done for clients as a freelance web developer.
+    </p>
+
+    <div id="projectList">
+        {{ range .Pages }}
+        <article>
+            {{ if isset .Params "thumbnail"}}
+            <img src="{{.Site.BaseURL}}/img/project-thumbnails/{{ .Params.thumbnail }}" alt="{{ .Title }}" />
+            {{ else }}
+            <img src="https://dummyimage.com/600x400/d6d6d6/fff.jpg&text={{.Title}}" alt="{{ .Title }}" />
+            {{ end }}
+            <div class="content">
+                <h3>{{ .Name }}</h3>
+                <p class="projSumm">{{ .Summary}}</p>
+                <!-- prettier-ignore -->
+                <a href="{{ .RelPermalink }}" class="btn-project">View</a>
+            </div>
+        </article>
+        {{ end }}
+    </div>
+
+</main>
+
+{{ partial "footer" . }}

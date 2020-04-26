@@ -1,20 +1,8 @@
 baseURL = "https://dylangore.github.io/dylangore.ie/"
 languageCode = "en-ie"
 title = "Dylan Gore"
-theme = "minimal"
+theme = "dylangore"
 googleAnalytics = ""
-
-[params]
-    author = "Dylan Gore"
-    description = "Personal portfolio and blog."
-    githubUsername = "dylangore"
-    accent = "blue"
-    showBorder = true
-    backgroundColor = "white"
-    font = "Raleway" # should match the name on Google Fonts!
-    highlight = true
-    highlightStyle = "default"
-    highlightLanguages = ["python", "haskell", "kotlin", "scala", "swift"]
 
 [[menu.main]]
     url = "/"
@@ -22,17 +10,12 @@ googleAnalytics = ""
     weight = 1
 
 # [[menu.main]]
-#     url = "/about/"
-#     name = "About"
-#     weight = 2
+#     url = "/posts/"
+#     name = "Posts"
+#     weight = 3
 
 [[menu.main]]
-    url = "/post/"
-    name = "Posts"
-    weight = 3
-
-[[menu.main]]
-    url = "/project/"
+    url = "/projects/"
     name = "Projects"
     weight = 4
 
@@ -44,23 +27,28 @@ googleAnalytics = ""
     url = "mailto:me@hello@dylangore.ie"
     name = "envelope-o"
     weight = 1
+    pre = "fa-solid"
 
 [[menu.icon]]
     url = "https://github.com/DylanGore/"
     name = "github"
     weight = 2
+    pre = "fa-brands"
 
 [[menu.icon]]
     url = "https://twitter.com/DylanGore/"
     name = "twitter"
     weight = 3
+    pre = "fa-brands"
 
-#[[menu.icon]]
-#    url = "https://dev.to/DylanGore/"
-#    name = "dev"
-#    weight = 4
+[[menu.icon]]
+   url = "https://dev.to/DylanGore/"
+   name = "dev"
+   weight = 4
+   pre = "fa-brands"
 
 [[menu.icon]]
     url = "https://www.linkedin.com/in/dylangore/"
-    name = "linkedin"
+    name = "linkedin-in"
     weight = 5
+    pre = "fa-brands"
