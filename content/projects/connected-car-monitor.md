@@ -2,7 +2,7 @@
 title: 'Connected Car Monitor'
 date: 2019-08-23
 tags: []
-draft: true
+draft: false
 thumbnail: 'connected-car-monitor.jpg'
 sourceURL: 'https://github.com/DylanGore/IoT-Project-2019'
 docsURL: 'https://github.com/DylanGore/IoT-Project-2019/wiki'

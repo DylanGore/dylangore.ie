@@ -2,7 +2,7 @@
 title: 'Personal Website 2019'
 date: 2019-10-15
 tags: []
-draft: true
+draft: false
 thumbnail: 'personal-website-2019.jpg'
 sourceURL: 'https://github.com/DylanGore/dylangore.ie/tree/2019'
 ---
