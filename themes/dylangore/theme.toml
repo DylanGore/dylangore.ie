@@ -1,0 +1,12 @@
+name = "DylanGore"
+license = "MIT"
+licenselink = "https://github.com/DylanGore/dylangore.ie/blob/2020/LICENSE.md"
+description = "A custom Hugo theme designed for my personal website and portfolio."
+homepage = "http://github.com/DylanGore/dylangore.ie"
+tags = ["personal", "portfolio","responsive"]
+features = ["responsive"]
+min_version = "0.24.1"
+
+[author]
+  name = "Dylan Gore"
+  homepage = "https://dylangore.ie"
