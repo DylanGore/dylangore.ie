@@ -456,3 +456,14 @@ ul#links>li {
     color: #dd5143 !important;
     font-weight: bold;
 }
+
+/* 404 Page */
+a#home-button {
+    margin: 0;
+    text-decoration: none;
+    color: #000;
+}
+
+a#home-button:hover {
+    color: #888888;
+}
