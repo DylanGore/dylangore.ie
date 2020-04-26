@@ -308,3 +308,151 @@ div#projectList article img {
         margin-top: 0.5em;
     }
 }
+
+/* Home page */
+#cover-content {
+    /* Background pattern from Toptal Subtle Patterns */
+    background: url('../img/webb.png');
+    width: 100%;
+    height: 100%;
+    align-self: center;
+    justify-self: center;
+    text-align: center;
+    padding: 2% 0 2%;
+}
+
+#cover-content>img {
+    margin-top: 5%;
+    border-radius: 100%;
+}
+
+#cover-content>h1 {
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-weight: 300;
+}
+
+#cover-content>p {
+    font-size: 1.2em;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+#cover-content>a {
+    text-decoration: none;
+    color: #fff;
+    padding: 1.2em;
+    background: #2e4b7a;
+    border-radius: 5px;
+}
+
+#cover-content>a:hover {
+    background: #243a5e;
+}
+
+ul#skills {
+    margin: auto;
+    width: 35%;
+    color: black;
+    padding: 0;
+    display: grid;
+    font-size: 0.9em;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1em;
+    list-style-type: none;
+    padding-bottom: 2.5em;
+}
+
+ul#skills>li {
+    padding: 4%;
+    font-size: 1.2em;
+    align-self: center;
+    justify-self: center;
+}
+
+/* ul#links {
+    margin: 0 auto;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 1em;
+    list-style-type: none;
+    padding-bottom: 2.5em;
+    width: 100%;
+}
+
+ul#links>li {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    align-self: center;
+    justify-self: center;
+} */
+
+/* #cover-footer a {
+    text-decoration: none;
+    color: #fff;
+    padding: 1.2em;
+    margin: 0;
+}
+
+#cover-footer .fa-2x,
+#cover-footer img {
+    vertical-align: middle;
+} */
+
+
+@media screen and (max-width: 790px) {
+    ul#skills {
+        width: 100%;
+    }
+}
+
+/* Contact Page */
+#contactLinks {
+    margin: auto;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 1em;
+    list-style-type: none;
+    padding-bottom: 2.5em;
+    font-size: 1.3em;
+}
+
+#contactLinks a {
+    text-decoration: none;
+    color: #242424;
+}
+
+/* Icons */
+/* Icon Size */
+.icon-2x {
+    font-size: 2em;
+}
+
+/* Icon Color */
+.github-icon:hover {
+    color: #333 !important;
+    font-weight: bold;
+}
+
+.twitter-icon:hover {
+    color: #1da1f2 !important;
+    font-weight: bold;
+}
+
+.devto-icon:hover {
+    color: #000 !important;
+    font-weight: bold;
+}
+
+.linkedin-icon:hover {
+    color: #0077b5 !important;
+    font-weight: bold;
+}
+
+.email-icon:hover {
+    color: #dd5143 !important;
+    font-weight: bold;
+}
