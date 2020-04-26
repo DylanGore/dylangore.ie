@@ -2,7 +2,7 @@
 title: 'ASOIF Route Finder'
 date: 2019-05-03
 tags: []
-draft: true
+draft: false
 thumbnail: 'asoif-route-finder.jpg'
 sourceURL: 'https://github.com/DylanGore/WesterosRouteFinder'
 ---

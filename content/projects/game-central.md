@@ -2,7 +2,7 @@
 title: 'Game Central'
 date: 2018-06-01
 tags: []
-draft: true
+draft: false
 thumbnail: 'game-central.jpg'
 message: 'The website is no longer live as the client decided to cease operations under the Crazy Carts brand. A copy of the website may be made available in the future pending client approval.'
 ---
