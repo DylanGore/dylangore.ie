@@ -7,4 +7,4 @@ thumbnail: 'personal-website-2019.jpg'
 sourceURL: 'https://github.com/DylanGore/dylangore.ie/tree/2019'
 ---
 
-This website. It is a VueJS web app using Firebase as a backend. It has full authentication and CRUD features.
+This previous version of this website. It was a VueJS web app using Firebase as a backend. It had full authentication and CRUD features.
