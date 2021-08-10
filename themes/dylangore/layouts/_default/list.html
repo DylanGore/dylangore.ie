@@ -1,16 +1,22 @@
 {{ partial "head" . }}
+{{ partial "header" .}}
 
 <main id="page-main" class="container">
 
-    <h1>{{ .Title }}</h1>
+    <h1 class="mt-2">{{ .Title }}</h1>
 
-    <article>
+    <div class="grid">
         {{ range .Pages }}
-        <h2>{{ .Title }} </h2>
-        <p>{{ .Summary }}</p>
-        <a href="{{ .RelPermalink }}" class="btn btn-primary">View</a>
+        <div class="g-col-sm-12 g-col-md-6 g-col-lg-4">
+            <article class="card bg-dark-accent h-100">
+                <div class="card-body">
+                    <h3 class="card-title">{{ .Name }}</h3>
+                    <a href="{{ .RelPermalink }}" class="btn btn-dark">View</a>
+                </div>
+            </article>
+        </div>
         {{ end }}
-    </article>
+    </div>
 
 </main>
 

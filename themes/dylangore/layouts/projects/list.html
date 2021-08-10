@@ -1,9 +1,10 @@
 {{ partial "head" . }}
+{{ partial "header" .}}
 
 <main id="page-main" class="container-fluid">
     <div class="grid">
         <div class="g-col-12">
-            <h1>{{ .Title }}</h1>
+            <h1 class="mt-2">{{ .Title }}</h1>
             <p>
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque libero animi natus iusto corporis aliquam distinctio aliquid placeat, quod ea rerum maxime magnam, neque harum quo adipisci officia laudantium qui?
             </p>
@@ -12,7 +13,7 @@
     <div class="grid">
         {{ range .Pages }}
         <div class="g-col-sm-12 g-col-md-6 g-col-lg-4">
-            <article class="card">
+            <article class="card bg-dark-accent h-100">
                 {{ if isset .Params "thumbnail"}}
                 <img src="{{.Site.BaseURL}}/img/project-thumbnails/{{ .Params.thumbnail }}" alt="{{ .Title }}" class="card-img-top" />
                 {{ else }}
@@ -30,8 +31,9 @@
                         #{{ . }}
                         {{ end }}
                     </p>
-                    <!-- prettier-ignore -->
-                    <a href="{{ .RelPermalink }}" class="btn btn-primary">View</a>
+                </div>
+                <div class="card-footer">
+                    <a href="{{ .RelPermalink }}" class="btn btn-dark">View</a>
                 </div>
             </article>
         </div>

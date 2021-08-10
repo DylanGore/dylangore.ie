@@ -1,16 +1,16 @@
 {{ partial "head" . }}
 
 <main id="page-main" class="container">
-    <h1>Error 404 - Not Found</h1>
-    <p>The content you are looking for could not be found.</p>
-    <p>
-        If you believe that this is an error, please
-        <a href="{{ .Site.BaseURL }}/contact">contact me</a>.
-    </p>
-    <br />
-    <a href="{{ .Site.BaseURL }}" id="home-button">
-        <span class="iconify" data-icon="mdi:home"></span> Go to Home
-    </a>
+    <div class="grid">
+        <div class="g-col-12">
+            <h1 class="mt-2">Error 404 - Not Found</h1>
+            <p>The content you are looking for could not be found.</p>
+            <br />
+            <a href="{{ .Site.BaseURL }}" id="home-button">
+                <span class="iconify" data-icon="mdi:home"></span> Go to Home
+            </a>
+        </div>
+    </div>
 </main>
 
 {{ partial "footer" . }}

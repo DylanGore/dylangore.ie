@@ -1,41 +1,39 @@
 {{ partial "head" . }}
+{{ partial "header" .}}
 
-<main id="page-main" class="container-fluid">
+<main id="page-main" class="container">
     <div class="grid">
         <div class="g-col-12">
             <a type="button" role="button" class="btn btn-primary" href="{{.Parent.URL}}"><span class="iconify-inline" data-icon="mdi:arrow-left"></span>Back to projects list</a>
             <br>
             <br>
             </a>
-            {{ if isset .Params "gh_thumbnail"}}
-            <img src="{{ .Params.gh_thumbnail }}" alt="{{ .Title }}" class="img-fluid img-project" />
+            {{ if isset .Params "thumbnail"}}
+            <img src="{{.Site.BaseURL}}/img/project-thumbnails/{{ .Params.thumbnail }}" alt="{{ .Title }}" class="img-fluid img-project" />
             {{ else }}
             <img src="https://dummyimage.com/1200x600/d6d6d6/fff.jpg&text={{.Title}}" alt="{{ .Title }}" class="img-fluid img-project" />
             {{ end }}
             <div id="content">
                 <h1>{{ .Title }}</h1>
-                <p class="projDesc">{{ .Content }}</p>
+                <p class="projDesc">{{ .Content }} d</p>
 
-                {{ if isset .Params "sourceurl" }}
-                <a href="{{ .Params.sourceURL }}" class="btn btn-primary" target="_blank">
+                {{ if isset .Params "sourceURL" }}
+                <a href="{{ .Params.sourceURL }}" class="btn btn-dark" target="_blank">
                     <span class="iconify-inline" data-icon="mdi:github"></span>
                     View Source
                 </a>
                 {{ end }}
-                {{ if isset .Params "docsurl" }}
-                <a href="{{ .Params.docsURL }}" class="btn btn-primary" target="_blank">
+                {{ if isset .Params "docsURL" }}
+                <a href="{{ .Params.docsURL }}" class="btn btn-dark" target="_blank">
                     <span class="iconify-inline" data-icon="mdi:text-box-multiple"></span>
                     View Documentation
                 </a>
                 {{ end }}
-                {{ if isset .Params "projecturl" }}
-                <a href="{{ .Params.projectURL }}" class="btn btn-primary" target="_blank">
+                {{ if isset .Params "homepageURL" }}
+                <a href="{{ .Params.projectURL }}" class="btn btn-dark" target="_blank">
                     <span class="iconify-inline" data-icon="mdi:earth"></span>
                     View Project
                 </a>
-                {{ end }}
-                {{ if isset .Params "message" }}
-                <span class="projMessage">{{ .Params.message }}</span>
                 {{ end }}
             </div>
         </div>
