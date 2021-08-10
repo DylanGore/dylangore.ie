@@ -1,7 +1,13 @@
-<footer id="page-footer">
-    <p id="copyright">{{ .Site.Params.copyright | default "&copy; Copyright 2020 Dylan Gore" | markdownify }}</p>
+<footer id="page-footer" class="container-fluid text-center bg-dark-accent p-2 mt-4">
+    <div class="grid">
+        <div class="g-col-12">
+            <p>{{ .Site.Params.copyright | default "&copy; Copyright 2021 Dylan Gore" | markdownify }}</p>
+        </div>
+    </div>
 </footer>
-</div> <!-- End div.wrapper -->
+<!-- Boostrap JS & Popper -->
+{{ $bootstrapJS := resources.Get "js/bootstrap/bootstrap.bundle.min.js" | resources.Minify}}
+<script src="{{ $bootstrapJS.Permalink }}"></script>
 </body>
 
 </html>

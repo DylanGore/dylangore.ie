@@ -1,7 +1,78 @@
-{{ partial "header" . }}
+{{ partial "head" . }}
 
-<main id="cover-content">
-    {{ .Content }}
+<main id="page-main">
+    <section id="title" class="position-relative">
+        <div class="position-absolute top-50 start-50 translate-middle text-center">
+            <img class="img-responsive rounded-circle" id="avatar" src="https://avatars.githubusercontent.com/u/2760449?v=4" alt="Dylan Gore Avatar"><br>
+            <h1 class="mt-2">Dylan Gore</h1>
+            <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias saepe quod necessitatibus ipsa voluptates in modi inventore, maxime quisquam quis est asperiores et dicta, nemo nisi doloribus adipisci minus numquam?</p>
+            <br>
+            <a href="#projects" id="scroll-btn" title="Scroll to Projects section">
+                <span class="iconify-inline" data-icon="mdi:chevron-down"></span>
+            </a>
+        </div>
+    </section>
+    <section id="projects" class="container">
+        <h2 class="pt-2">Projects</h2>
+        <div class="grid">
+            {{ range  first 9 (where .Site.RegularPages "Section" "projects") }}
+            <div class="g-col-sm-12 g-col-md-6 g-col-lg-4">
+                <div class="card bg-dark-accent">
+                    <div class="card-body">
+                        <h3 class="card-title">{{ .Title }}</h3>
+                        <p class="card-text">{{ .Summary | truncate 120 }}</p>
+                        <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                    </div>
+                    <div class="card-footer text-muted">
+                        {{ if isset .Params "contributors" }}
+                        <a href="{{ .Params.sourceURL }}/graphs/contributors">
+                            <span class="iconify-inline" data-icon="octicon:person-24"></span> {{ .Params.contributors }}
+                        </a>
+                        {{ end }}
+                        {{ if isset .Params "stars" }}
+                        <a href="{{ .Params.sourceURL }}/stargazers">
+                            <span class="iconify-inline" data-icon="octicon:star-24"></span> {{ .Params.stars }}
+                        </a>
+                        {{ end }}
+                        {{ if isset .Params "pullrequests" }}
+                        <a href="{{ .Params.sourceURL }}/pulls">
+                            <span class="iconify-inline" data-icon="octicon:repo-forked-24"></span> {{ .Params.pullrequests }}
+                        </a>
+                        {{ end }}
+                        {{ if isset .Params "issues" }}
+                        <a href="{{ .Params.sourceURL }}/issues">
+                            <span class="iconify-inline" data-icon="octicon:issue-opened-24"></span> {{ .Params.issues }}
+                        </a>
+                        {{ end }}
+                        <span class="float-end">{{ .Params.type }}</span>
+                    </div>
+                </div>
+            </div>
+            {{ end }}
+
+        </div>
+        <div class="grid text-center mt-2">
+            <div class="g-col-12">
+                <a class="btn btn-primary">View more projects</a>
+            </div>
+        </div>
+    </section>
+    <section id="contact" class="container">
+        <h2 class="pt-2">Contact</h2>
+        <div class="grid">
+            <div class="g-col-12">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam, aliquam, exercitationem amet itaque modi nesciunt labore in molestias consequuntur et repudiandae voluptatum neque autem eum vero quas fugiat? Quas, laboriosam!</p>
+            </div>
+        </div>
+        <div class="grid">
+            <div class="g-col-12 text-center">
+                <a href="https://github.com/DylanGore" target="_blank" class="btn btn-dark-accent mx-2" name="GitHub" role="button"><span class="iconify-inline" data-icon="mdi:github"></span></a>
+                <a href="https://twitter.com/DylanGore" target="_blank" class="btn btn-dark-accent mx-2" name="Twitter" role="button"><span class="iconify-inline" data-icon="mdi:twitter"></span></a>
+                <a href="https://www.linkedin.com/in/dylangore/" target="_blank" class="btn btn-dark-accent mx-2" name="LinkedIn" role="button"><span class="iconify-inline" data-icon="mdi:linkedin"></span></a>
+                <a href="mailto:hello@dylangore.ie" target="_blank" class="btn btn-dark-accent mx-2" name="E-Mail" role="button"><span class="iconify-inline" data-icon="mdi:email"></span></a>
+            </div>
+        </div>
+    </section>
 </main>
 
 {{ partial "footer" . }}

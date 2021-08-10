@@ -1,28 +1,40 @@
-{{ partial "header" . }}
+{{ partial "head" . }}
 
-<main id="page-main">
-
-    <h1>{{ .Title }}</h1>
-    <p>
-        A showcase of some of my own personal projects as well as some of
-        the work I have done for clients as a freelance web developer.
-    </p>
-
-    <div id="projectList">
+<main id="page-main" class="container-fluid">
+    <div class="grid">
+        <div class="g-col-12">
+            <h1>{{ .Title }}</h1>
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque libero animi natus iusto corporis aliquam distinctio aliquid placeat, quod ea rerum maxime magnam, neque harum quo adipisci officia laudantium qui?
+            </p>
+        </div>
+    </div>
+    <div class="grid">
         {{ range .Pages }}
-        <article>
-            {{ if isset .Params "thumbnail"}}
-            <img src="{{.Site.BaseURL}}/img/project-thumbnails/{{ .Params.thumbnail }}" alt="{{ .Title }}" />
-            {{ else }}
-            <img src="https://dummyimage.com/600x400/d6d6d6/fff.jpg&text={{.Title}}" alt="{{ .Title }}" />
-            {{ end }}
-            <div class="content">
-                <h3>{{ .Name }}</h3>
-                <p class="projSumm">{{ .Summary}}</p>
-                <!-- prettier-ignore -->
-                <a href="{{ .RelPermalink }}" class="btn-project">View</a>
-            </div>
-        </article>
+        <div class="g-col-sm-12 g-col-md-6 g-col-lg-4">
+            <article class="card">
+                {{ if isset .Params "thumbnail"}}
+                <img src="{{.Site.BaseURL}}/img/project-thumbnails/{{ .Params.thumbnail }}" alt="{{ .Title }}" class="card-img-top" />
+                {{ else }}
+                {{ if isset .Params "gh_thumbnail"}}
+                <img src="{{ .Params.gh_thumbnail }}" alt="{{ .Title }}" class="card-img-top" />
+                {{ else }}
+                <img src="https://dummyimage.com/1200x600/d6d6d6/fff.jpg&text={{.Title}}" alt="{{ .Title }}" class="card-img-top" />
+                {{ end }}
+                {{ end }}
+                <div class="card-body">
+                    <h3 class="card-title">{{ .Name }}</h3>
+                    <p class="card-text">
+                        {{ .Summary | truncate 120 }} <br>
+                        {{ range .Params.tags }}
+                        #{{ . }}
+                        {{ end }}
+                    </p>
+                    <!-- prettier-ignore -->
+                    <a href="{{ .RelPermalink }}" class="btn btn-primary">View</a>
+                </div>
+            </article>
+        </div>
         {{ end }}
     </div>
 

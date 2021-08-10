@@ -1,6 +1,6 @@
 # dylangore.ie
 
-My personal website and portfolio - 2020 edition!
+My personal website and portfolio - 2021 edition!
 
 ## License
 

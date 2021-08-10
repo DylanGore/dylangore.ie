@@ -1,0 +1,47 @@
+html, body {
+  font-family: 'Roboto', Verdana, Geneva, Tahoma, sans-serif;
+  background: rgba(32,33,36,1) 0%;
+  color: #fff;
+}
+
+.img-project {
+  width: 50%;
+}
+
+#title {
+  height: 100vh;
+}
+
+#avatar {
+  height: 25%;
+  width: 25%;
+}
+
+#scroll-btn {
+  margin-top: 2em;
+  width: 2em;
+  height: 2em;
+  font-size: 4em;
+}
+
+#projects .card {
+  height: 100%;
+}
+
+#contact button {
+  font-size: 2em;
+  color: white
+}
+
+#page-footer p {
+  margin-bottom: 0;
+}
+
+.bg-dark-accent {
+  background-color: var(--bs-dark-accent);
+}
+
+#projects .card-footer a, #projects .card-footer a:active {
+  color: inherit;
+  text-decoration: none;
+}

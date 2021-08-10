@@ -1,72 +1,25 @@
-<!DOCTYPE html>
-<html lang="{{ .Site.LanguageCode }}">
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>{{ .Title }}</title>
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-    <link rel="stylesheet" href="{{ "css/main.css" | absURL }}">
-    <script src="https://code.iconify.design/1/1.0.6/iconify.min.js"></script>
-
-    {{ with .OutputFormats.Get "RSS" }}
-    <link href="{{ .RelPermalink }}" rel="alternate" type="{{ .MediaType.Type }}" title="{{ $.Site.Title }}" />
-    <link href="{{ .RelPermalink }}" rel="feed" type="{{ .MediaType.Type }}" title="{{ $.Site.Title }}" />
-    {{ end }}
-
-    <!-- Favicons -->
-    <link rel="apple-touch-icon" sizes="57x57" href="img/icons/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="img/icons/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="img/icons/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="img/icons/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="img/icons/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="img/icons/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="img/icons/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="img/icons/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="img/icons/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="img/icons/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="img/icons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="img/icons/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="img/icons/favicon-16x16.png">
-    <link rel="manifest" href="img/icons/manifest.json">
-    <meta name="msapplication-TileColor" content="#243a5e">
-    <meta name="msapplication-TileImage" content="img/icons/ms-icon-144x144.png">
-    <meta name="theme-color" content="#243a5e">
-
-    {{ if .Site.GoogleAnalytics }}
-    <script async src="https://www.googletagmanager.com/gtag/js?id={{ .Site.GoogleAnalytics }}"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments)
-        };
-        gtag('js', new Date());
-        gtag('config', '{{ .Site.GoogleAnalytics }}');
-    </script>
-    {{ end }}
-</head>
-
-<body>
-    <div class="wrapper">
-        <header class="navbar">
-            <span class="brand">
-                <a href="{{.Site.BaseURL }}" id="page-title">Dylan Gore</a>
-            </span>
-            <label for="nav-toggle" class="nav-toggle-label">
-                <span class="iconify icon-2x" data-icon="mdi:menu"></span>
-            </label>
-            <!-- prettier-ignore -->
-            <input type="checkbox" id="nav-toggle" class="nav-toggle" />
-            <nav class="navbar-nav">
-                {{ if .Site.Menus.main }}
-                <ul class="nav navbar-nav">
-                    {{ range sort .Site.Menus.main }}
-                    <li><a href="{{ .URL }}">{{ .Name }}</a></li>
-                    {{ end }}
+<header id="page-header">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" id="navbarMain">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="{{.Site.BaseURL}}">Dylan Gore</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarMain">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li> -->
                 </ul>
-                {{ end }}
-            </nav>
-        </header>
+                <ul class="navbar-nav mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="https://github.com/DylanGore" target="_blank"><span class="iconify" data-icon="mdi:github" data-inline="true"></span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://twitter.com/DylanGore" target="_blank"><span class="iconify" data-icon="mdi:twitter" data-inline="true"></span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://www.linkedin.com/in/dylangore" target="_blank"><span class="iconify" data-icon="mdi:linkedin" data-inline="true"></span></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>

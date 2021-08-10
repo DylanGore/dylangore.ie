@@ -1,6 +1,6 @@
-{{ partial "header" . }}
+{{ partial "head" . }}
 
-<main id="page-main">
+<main id="page-main" class="container">
 
     <h1>{{ .Title }}</h1>
 
@@ -8,7 +8,7 @@
         {{ range .Pages }}
         <h2>{{ .Title }} </h2>
         <p>{{ .Summary }}</p>
-        <a href="{{ .RelPermalink }}" class="btn-project">View</a>
+        <a href="{{ .RelPermalink }}" class="btn btn-primary">View</a>
         {{ end }}
     </article>
 

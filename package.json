@@ -1,0 +1,21 @@
+{
+  "name": "dylangore.ie",
+  "version": "1.0.0",
+  "description": "My personal website and portfolio. Built using Hugo.",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DylanGore/dylangore.ie.git"
+  },
+  "author": "Dylan Gore",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DylanGore/dylangore.ie/issues"
+  },
+  "homepage": "https://github.com/DylanGore/dylangore.ie#readme",
+  "dependencies": {
+    "bootstrap": "^5.1.0"
+  }
+}
