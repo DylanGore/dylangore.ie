@@ -23,24 +23,24 @@
                         <p class="card-text">{{ .Summary | truncate 120 }}</p>
                         <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
                     </div>
-                    <div class="card-footer text-muted">
+                    <div class="card-footer">
                         {{ if isset .Params "contributors" }}
-                        <a href="{{ .Params.sourceURL }}/graphs/contributors">
+                        <a href="{{ .Params.sourceURL }}/graphs/contributors" name="GitHub Contributors">
                             <span class="iconify-inline" data-icon="octicon:person-24"></span> {{ .Params.contributors }}
                         </a>
                         {{ end }}
                         {{ if isset .Params "stars" }}
-                        <a href="{{ .Params.sourceURL }}/stargazers">
+                        <a href="{{ .Params.sourceURL }}/stargazers" name="GitHub Stars">
                             <span class="iconify-inline" data-icon="octicon:star-24"></span> {{ .Params.stars }}
                         </a>
                         {{ end }}
                         {{ if isset .Params "pullrequests" }}
-                        <a href="{{ .Params.sourceURL }}/pulls">
+                        <a href="{{ .Params.sourceURL }}/pulls" name="GitHub PRs">
                             <span class="iconify-inline" data-icon="octicon:repo-forked-24"></span> {{ .Params.pullrequests }}
                         </a>
                         {{ end }}
                         {{ if isset .Params "issues" }}
-                        <a href="{{ .Params.sourceURL }}/issues">
+                        <a href="{{ .Params.sourceURL }}/issues" name="GitHub Issues">
                             <span class="iconify-inline" data-icon="octicon:issue-opened-24"></span> {{ .Params.issues }}
                         </a>
                         {{ end }}
@@ -66,10 +66,10 @@
         </div>
         <div class="grid">
             <div class="g-col-12 text-center">
-                <a href="https://github.com/DylanGore" target="_blank" class="btn btn-dark-accent mx-2" name="GitHub" role="button"><span class="iconify-inline" data-icon="mdi:github"></span></a>
-                <a href="https://twitter.com/DylanGore" target="_blank" class="btn btn-dark-accent mx-2" name="Twitter" role="button"><span class="iconify-inline" data-icon="mdi:twitter"></span></a>
-                <a href="https://www.linkedin.com/in/dylangore/" target="_blank" class="btn btn-dark-accent mx-2" name="LinkedIn" role="button"><span class="iconify-inline" data-icon="mdi:linkedin"></span></a>
-                <a href="mailto:hello@dylangore.ie" target="_blank" class="btn btn-dark-accent mx-2" name="E-Mail" role="button"><span class="iconify-inline" data-icon="mdi:email"></span></a>
+                <a href="https://github.com/DylanGore" target="_blank" class="btn btn-dark-accent mx-2" name="GitHub" role="button" aria-label="GitHub"><span class="iconify-inline" data-icon="mdi:github"></span></a>
+                <a href="https://twitter.com/DylanGore" target="_blank" class="btn btn-dark-accent mx-2" name="Twitter" role="button" aria-label="Twitter"><span class="iconify-inline" data-icon="mdi:twitter"></span></a>
+                <a href="https://www.linkedin.com/in/dylangore/" target="_blank" class="btn btn-dark-accent mx-2" name="LinkedIn" role="button" aria-label="LinkedIn"><span class="iconify-inline" data-icon="mdi:linkedin"></span></a>
+                <a href="mailto:hello@dylangore.ie" target="_blank" class="btn btn-dark-accent mx-2" name="E-Mail" role="button" aria-label="E-Mail"><span class="iconify-inline" data-icon="mdi:email"></span></a>
             </div>
         </div>
     </section>
