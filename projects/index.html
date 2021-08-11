@@ -1,5 +1,277 @@
-<!doctype html><html lang=en-ie><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><title>Projects</title><link rel=stylesheet href="https://fonts.googleapis.com/css?family=Montserrat"><link rel=stylesheet href=https://dylangore.github.io/dylangore.ie/css/main.css><script src=https://code.iconify.design/1/1.0.6/iconify.min.js></script><link href=/dylangore.ie/projects/index.xml rel=alternate type=application/rss+xml title="Dylan Gore"><link href=/dylangore.ie/projects/index.xml rel=feed type=application/rss+xml title="Dylan Gore"><link rel=apple-touch-icon sizes=57x57 href=img/icons/apple-icon-57x57.png><link rel=apple-touch-icon sizes=60x60 href=img/icons/apple-icon-60x60.png><link rel=apple-touch-icon sizes=72x72 href=img/icons/apple-icon-72x72.png><link rel=apple-touch-icon sizes=76x76 href=img/icons/apple-icon-76x76.png><link rel=apple-touch-icon sizes=114x114 href=img/icons/apple-icon-114x114.png><link rel=apple-touch-icon sizes=120x120 href=img/icons/apple-icon-120x120.png><link rel=apple-touch-icon sizes=144x144 href=img/icons/apple-icon-144x144.png><link rel=apple-touch-icon sizes=152x152 href=img/icons/apple-icon-152x152.png><link rel=apple-touch-icon sizes=180x180 href=img/icons/apple-icon-180x180.png><link rel=icon type=image/png sizes=192x192 href=img/icons/android-icon-192x192.png><link rel=icon type=image/png sizes=32x32 href=img/icons/favicon-32x32.png><link rel=icon type=image/png sizes=96x96 href=img/icons/favicon-96x96.png><link rel=icon type=image/png sizes=16x16 href=img/icons/favicon-16x16.png><link rel=manifest href=img/icons/manifest.json><meta name=msapplication-TileColor content="#243a5e"><meta name=msapplication-TileImage content="img/icons/ms-icon-144x144.png"><meta name=theme-color content="#243a5e"></head><body><div class=wrapper><header class=navbar><span class=brand><a href=https://dylangore.github.io/dylangore.ie/ id=page-title>Dylan Gore</a></span>
-<label for=nav-toggle class=nav-toggle-label><span class="iconify icon-2x" data-icon=mdi:menu></span></label><input type=checkbox id=nav-toggle class=nav-toggle><nav class=navbar-nav><ul class="nav navbar-nav"><li><a href=/dylangore.ie/>Home</a></li><li><a href=/dylangore.ie/projects/>Projects</a></li><li><a href=/dylangore.ie/contact/>Contact</a></li></ul></nav></header><main id=page-main><h1>Projects</h1><p>A showcase of some of my own personal projects as well as some of
-the work I have done for clients as a freelance web developer.</p><div id=projectList><article><img src=https://dylangore.github.io/dylangore.ie//img/project-thumbnails/personal-website-2019.jpg alt="Personal Website 2019"><div class=content><h3>Personal Website 2019</h3><p class=projSumm>This previous version of this website. It was a VueJS web app using Firebase as a backend. It had full authentication and CRUD features.</p><a href=/dylangore.ie/projects/personal-website-2019/ class=btn-project>View</a></div></article><article><img src=https://dylangore.github.io/dylangore.ie//img/project-thumbnails/connected-car-monitor.jpg alt="Connected Car Monitor"><div class=content><h3>Connected Car Monitor</h3><p class=projSumm>This is a device I designed that used the OBD-II port in a vehicle to gather information like speed and engine RPM. The GPS location is also got from the user&rsquo;s mobile device via the Blynk app.
-All of the data is gathered and sent to Firebase (using Adafruit IO as an intermediary for security and data aggregation) where it is stored and where the Vue JS web app is hosted to display the data to the user.</p><a href=/dylangore.ie/projects/connected-car-monitor/ class=btn-project>View</a></div></article><article><img src=https://dylangore.github.io/dylangore.ie//img/project-thumbnails/asoif-route-finder.jpg alt="ASOIF Route Finder"><div class=content><h3>ASOIF Route Finder</h3><p class=projSumm>“Create a route finder for the known world of A Song of Ice and Fire (Game of Thrones) series.”
-The objective of this team CA exercise is to create an interactive application that can search for and retrieve various routes between specified towns/cities in the “known world” as depicted in George R. R. Martin’s A Song of Ice and Fire book series, which is the basis for the TV series Game of Thrones.</p><a href=/dylangore.ie/projects/asoif-route-finder/ class=btn-project>View</a></div></article><article><img src=https://dylangore.github.io/dylangore.ie//img/project-thumbnails/game-central.jpg alt="Game Central"><div class=content><h3>Game Central</h3><p class=projSumm>A website for a local corporate hire business using WordPress. It was running a custom theme that I designed.</p><a href=/dylangore.ie/projects/game-central/ class=btn-project>View</a></div></article><article><img src=https://dylangore.github.io/dylangore.ie//img/project-thumbnails/iris.jpg alt=Iris><div class=content><h3>Iris</h3><p class=projSumm>A simple device intended to monitor a door or an entrance. When a person is detected by the camera, an alert is sent to the user via Pushbullet. Facial recognition is also run to try and identify the person. All of this information is updated on the Django web app via the Iris API and a still image saved on the device.</p><a href=/dylangore.ie/projects/iris/ class=btn-project>View</a></div></article><article><img src=https://dylangore.github.io/dylangore.ie//img/project-thumbnails/crazy-carts.jpg alt="Crazy Carts"><div class=content><h3>Crazy Carts</h3><p class=projSumm>A website for a local event hire business using WordPress.</p><a href=/dylangore.ie/projects/crazy-carts/ class=btn-project>View</a></div></article></div></main><footer id=page-footer><p id=copyright>© Copyright 2020 Dylan Gore</p></footer></div></body></html>
+<!doctype html><html lang=en-ie>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta name=description content="Personal website and portfolio of Dylan Gore.">
+<title>Projects</title>
+<link rel=stylesheet href=https://dylangore.github.io/dylangore.ie/main.c0262d09a7daf2f90484e4e8f8a8e516ec767c055ebd02065ca0b8b4a35e2799.min.css>
+<link rel=stylesheet href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+<script src=https://code.iconify.design/2/2.0.3/iconify.min.js></script>
+<link href=/dylangore.ie/projects/index.xml rel=alternate type=application/rss+xml title="Dylan Gore">
+<link href=/dylangore.ie/projects/index.xml rel=feed type=application/rss+xml title="Dylan Gore">
+<link rel=apple-touch-icon sizes=57x57 href=img/icons/apple-icon-57x57.png>
+<link rel=apple-touch-icon sizes=60x60 href=img/icons/apple-icon-60x60.png>
+<link rel=apple-touch-icon sizes=72x72 href=img/icons/apple-icon-72x72.png>
+<link rel=apple-touch-icon sizes=76x76 href=img/icons/apple-icon-76x76.png>
+<link rel=apple-touch-icon sizes=114x114 href=img/icons/apple-icon-114x114.png>
+<link rel=apple-touch-icon sizes=120x120 href=img/icons/apple-icon-120x120.png>
+<link rel=apple-touch-icon sizes=144x144 href=img/icons/apple-icon-144x144.png>
+<link rel=apple-touch-icon sizes=152x152 href=img/icons/apple-icon-152x152.png>
+<link rel=apple-touch-icon sizes=180x180 href=img/icons/apple-icon-180x180.png>
+<link rel=icon type=image/png sizes=192x192 href=img/icons/android-icon-192x192.png>
+<link rel=icon type=image/png sizes=32x32 href=img/icons/favicon-32x32.png>
+<link rel=icon type=image/png sizes=96x96 href=img/icons/favicon-96x96.png>
+<link rel=icon type=image/png sizes=16x16 href=img/icons/favicon-16x16.png>
+<link rel=manifest href=img/icons/manifest.json>
+<meta name=msapplication-TileColor content="#243a5e">
+<meta name=msapplication-TileImage content="img/icons/ms-icon-144x144.png">
+<meta name=theme-color content="#243a5e">
+</head>
+<body>
+<header id=page-header>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark" id=navbarMain>
+<div class=container-fluid>
+<a class=navbar-brand href=https://dylangore.github.io/dylangore.ie/>Dylan Gore</a>
+<button class=navbar-toggler type=button data-bs-toggle=collapse data-bs-target=#navbarMain aria-controls=navbarMain aria-expanded=false aria-label="Toggle navigation">
+<span class=navbar-toggler-icon></span>
+</button>
+<div class="collapse navbar-collapse" id=navbarMain>
+<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+</ul>
+<ul class="navbar-nav mb-2 mb-lg-0">
+<li class=nav-item><a class=nav-link href=https://github.com/DylanGore target=_blank><span class=iconify data-icon=mdi:github data-inline=true></span></a></li>
+<li class=nav-item><a class=nav-link href=https://twitter.com/DylanGore target=_blank><span class=iconify data-icon=mdi:twitter data-inline=true></span></a></li>
+<li class=nav-item><a class=nav-link href=https://www.linkedin.com/in/dylangore target=_blank><span class=iconify data-icon=mdi:linkedin data-inline=true></span></a></li>
+</ul>
+</div>
+</div>
+</nav>
+</header>
+<main id=page-main class=container-fluid>
+<div class=grid>
+<div class=g-col-12>
+<h1 class=mt-2>Projects</h1>
+<p>
+Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque libero animi natus iusto corporis aliquam distinctio aliquid placeat, quod ea rerum maxime magnam, neque harum quo adipisci officia laudantium qui?
+</p>
+</div>
+</div>
+<div class=grid>
+<div class="g-col-sm-12 g-col-md-6 g-col-lg-4">
+<article class="card bg-dark-accent h-100">
+<img src=https://dylangore.github.io/dylangore.ie//img/project-thumbnails/home-assistant.png alt="Home Assistant" class=card-img-top>
+<div class=card-body>
+<h3 class=card-title>Home Assistant</h3>
+<p class=card-text>
+🏡 Open source home automation that puts local control and privacy first. <br>
+#python
+#home-automation
+#iot
+#internet-of-things
+#mqtt
+#raspberry-pi
+#asyncio
+#hacktoberfest
+</p>
+</div>
+<div class=card-footer>
+<a href=/dylangore.ie/projects/home-assistant/ class="btn btn-dark">View</a>
+</div>
+</article>
+</div>
+<div class="g-col-sm-12 g-col-md-6 g-col-lg-4">
+<article class="card bg-dark-accent h-100">
+<img src=https://dylangore.github.io/dylangore.ie//img/project-thumbnails/fyp-api.png alt=API class=card-img-top>
+<div class=card-body>
+<h3 class=card-title>API</h3>
+<p class=card-text>
+The API for interacting with vehicle data <br>
+#express
+#rest-api
+</p>
+</div>
+<div class=card-footer>
+<a href=/dylangore.ie/projects/fyp-api/ class="btn btn-dark">View</a>
+</div>
+</article>
+</div>
+<div class="g-col-sm-12 g-col-md-6 g-col-lg-4">
+<article class="card bg-dark-accent h-100">
+<img src=https://dylangore.github.io/dylangore.ie//img/project-thumbnails/fyp-dashboard.png alt=Dashboard class=card-img-top>
+<div class=card-body>
+<h3 class=card-title>Dashboard</h3>
+<p class=card-text>
+A Vue.js web app designed to interact with the vehicles API to display data. Firebase is used for authentication. <br>
+#vuejs
+#vite
+</p>
+</div>
+<div class=card-footer>
+<a href=/dylangore.ie/projects/fyp-dashboard/ class="btn btn-dark">View</a>
+</div>
+</article>
+</div>
+<div class="g-col-sm-12 g-col-md-6 g-col-lg-4">
+<article class="card bg-dark-accent h-100">
+<img src=https://dylangore.github.io/dylangore.ie//img/project-thumbnails/wit-timetable.png alt=WIT-Timetable class=card-img-top>
+<div class=card-body>
+<h3 class=card-title>WIT-Timetable</h3>
+<p class=card-text>
+A web scraper that reads information from the WIT Timetable website and displays it in a VueJS front end. <br>
+#vue
+#selenium
+#python
+#vite
+#web-scraping
+#flask
+#docker
+</p>
+</div>
+<div class=card-footer>
+<a href=/dylangore.ie/projects/wit-timetable/ class="btn btn-dark">View</a>
+</div>
+</article>
+</div>
+<div class="g-col-sm-12 g-col-md-6 g-col-lg-4">
+<article class="card bg-dark-accent h-100">
+<img src=https://dylangore.github.io/dylangore.ie//img/project-thumbnails/pymeteireann.png alt=PyMetEireann class=card-img-top>
+<div class=card-body>
+<h3 class=card-title>PyMetEireann</h3>
+<p class=card-text>
+A Python library to communicate with the Met Éireann Public Weather Forecast API. <br>
+#python
+</p>
+</div>
+<div class=card-footer>
+<a href=/dylangore.ie/projects/pymeteireann/ class="btn btn-dark">View</a>
+</div>
+</article>
+</div>
+<div class="g-col-sm-12 g-col-md-6 g-col-lg-4">
+<article class="card bg-dark-accent h-100">
+<img src=https://dylangore.github.io/dylangore.ie//img/project-thumbnails/fyp-car.png alt=Car class=card-img-top>
+<div class=card-body>
+<h3 class=card-title>Car</h3>
+<p class=card-text>
+The code that runs in the vehicle that gathers data <br>
+#python
+#raspberry-pi
+#obd-ii
+</p>
+</div>
+<div class=card-footer>
+<a href=/dylangore.ie/projects/fyp-car/ class="btn btn-dark">View</a>
+</div>
+</article>
+</div>
+<div class="g-col-sm-12 g-col-md-6 g-col-lg-4">
+<article class="card bg-dark-accent h-100">
+<img src=https://dylangore.github.io/dylangore.ie//img/project-thumbnails/fyp-documentation.png alt=Documentation class=card-img-top>
+<div class=card-body>
+<h3 class=card-title>Documentation</h3>
+<p class=card-text>
+Repository containing the documentation for all components of the project <br>
+#mkdocs
+#mkdocs-material
+#gh-pages
+#github-actions
+</p>
+</div>
+<div class=card-footer>
+<a href=/dylangore.ie/projects/fyp-documentation/ class="btn btn-dark">View</a>
+</div>
+</article>
+</div>
+<div class="g-col-sm-12 g-col-md-6 g-col-lg-4">
+<article class="card bg-dark-accent h-100">
+<img src=https://dylangore.github.io/dylangore.ie//img/project-thumbnails/microbit-ble-vue.png alt="Microbit BLE Vue" class=card-img-top>
+<div class=card-body>
+<h3 class=card-title>Microbit BLE Vue</h3>
+<p class=card-text>
+A Vue.JS web app that communicates with a micro:bit using Bluetooth Low Energy (BLE) and the Web Bluetooth API. <br>
+#microbit
+#microbit-ble
+#bluetooth
+#bluetooth-low-energy
+#web-bluetooth
+#vuejs
+</p>
+</div>
+<div class=card-footer>
+<a href=/dylangore.ie/projects/microbit-ble-vue/ class="btn btn-dark">View</a>
+</div>
+</article>
+</div>
+<div class="g-col-sm-12 g-col-md-6 g-col-lg-4">
+<article class="card bg-dark-accent h-100">
+<img src=https://dylangore.github.io/dylangore.ie//img/project-thumbnails/dylangore.ie.png alt=dylangore.ie class=card-img-top>
+<div class=card-body>
+<h3 class=card-title>dylangore.ie</h3>
+<p class=card-text>
+My personal website and portfolio. Created using Hugo with automated deployment using GitHub Actions. <br>
+#html
+#css
+#hugo
+#bootstrap
+#github-actions
+</p>
+</div>
+<div class=card-footer>
+<a href=/dylangore.ie/projects/dylangore.ie/ class="btn btn-dark">View</a>
+</div>
+</article>
+</div>
+<div class="g-col-sm-12 g-col-md-6 g-col-lg-4">
+<article class="card bg-dark-accent h-100">
+<img src=https://dylangore.github.io/dylangore.ie//img/project-thumbnails/aws-newwebserver.png alt=AWS-NewWebServer class=card-img-top>
+<div class=card-body>
+<h3 class=card-title>AWS-NewWebServer</h3>
+<p class=card-text>
+An AWS boto3 Python script to launch a new instance and install Apache while also creating any required S3 buckets, IAM … <br>
+#aws
+#ec2
+#s3
+#iam
+#cloudwatch
+#boto3
+</p>
+</div>
+<div class=card-footer>
+<a href=/dylangore.ie/projects/aws-newwebserver/ class="btn btn-dark">View</a>
+</div>
+</article>
+</div>
+<div class="g-col-sm-12 g-col-md-6 g-col-lg-4">
+<article class="card bg-dark-accent h-100">
+<img src=https://dylangore.github.io/dylangore.ie//img/project-thumbnails/westerosroutefinder.png alt=WesterosRouteFinder class=card-img-top>
+<div class=card-body>
+<h3 class=card-title>WesterosRouteFinder</h3>
+<p class=card-text>
+Data Structures & Algorithms 2 (Assignment 2) - Create a route finder for the known world of A Song of Ice and Fire … <br>
+#java
+#javafx
+#fxml
+#dijkstra-algorithm
+#data-structures
+#alogrithms
+#game-of-thrones
+#asoif
+</p>
+</div>
+<div class=card-footer>
+<a href=/dylangore.ie/projects/westerosroutefinder/ class="btn btn-dark">View</a>
+</div>
+</article>
+</div>
+</div>
+</main>
+<footer id=page-footer class="container-fluid text-center bg-dark-accent p-2 mt-4">
+<div class=grid>
+<div class=g-col-12>
+<p>© Copyright 2021 Dylan Gore</p>
+</div>
+</div>
+</footer>
+<script src=https://dylangore.github.io/dylangore.ie/js/bootstrap/bootstrap.bundle.min.min.js></script>
+</body>
+</html>
