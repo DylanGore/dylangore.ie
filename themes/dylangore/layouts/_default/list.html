@@ -1,10 +1,6 @@
-{{ partial "head" . }}
-{{ partial "header" .}}
-
-<main id="page-main" class="container">
-
+{{ define "main"}}
+<main id="page-main" class="container flex-shrink-0">
     <h1 class="mt-2">{{ .Title }}</h1>
-
     <div class="row">
         {{ range .Pages }}
         <div class="col-sm-12 col-md-6 col-lg-4 mt-4">
@@ -17,7 +13,5 @@
         </div>
         {{ end }}
     </div>
-
 </main>
-
-{{ partial "footer" . }}
+{{ end }}

@@ -1,16 +1,14 @@
-{{ partial "head" . }}
-
-<main id="page-main" class="container">
+{{ define "main" }}
+<main id="page-main" class="container flex-shrink-0">
     <div class="row">
-        <div class="col-12">
-            <h1 class="mt-2">Error 404 - Not Found</h1>
-            <p>The content you are looking for could not be found.</p>
+        <div class="col-12 text-center">
+            <h1 class="mt-2 display-4">Error 404 - Not Found</h1>
+            <p class="lead">The content you are looking for could not be found.</p>
             <br />
-            <a href="{{ .Site.BaseURL }}" id="home-button">
-                <span class="iconify" data-icon="mdi:home"></span> Go to Home
+            <a href="{{ .Site.BaseURL }}" class="btn btn-dark-accent btn-lg">
+                <span class="iconify-inline" data-icon="mdi:home"></span> Go to Homepage
             </a>
         </div>
     </div>
 </main>
-
-{{ partial "footer" . }}
+{{ end }}

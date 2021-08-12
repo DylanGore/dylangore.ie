@@ -1,16 +1,10 @@
-{{ partial "head" . }}
-{{ partial "header" .}}
-
-<main id="page-main" class="container">
-
+{{ define "main"}}
+<main id="page-main" class="container flex-shrink-0">
     <div class="row">
         <div class="col-12">
             <h1 class="mt-2">{{ .Title }}</h1>
-
             {{ .Content }}
         </div>
     </div>
-
 </main>
-
-{{ partial "footer" . }}
+{{ end }}

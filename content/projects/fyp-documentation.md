@@ -6,8 +6,8 @@ draft: false
 # gh_thumbnail: 'https://opengraph.githubassets.com/0/DylanGore-FYP/Documentation'
 thumbnail: 'fyp-documentation.png'
 sourceURL: 'https://github.com/DylanGore-FYP/Documentation'
-homepageURL: 'https://dylangore-fyp.github.io/Documentation' 
-type: 'Fyp'
+homepageURL: 'https://dylangore-fyp.github.io/Documentation'
+type: 'FYP'
 ---
 
 Repository containing the documentation for all components of the project

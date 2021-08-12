@@ -1,6 +1,6 @@
-{{ partial "head" . }}
-
-<main id="page-main">
+{{ define "header" }}<span></span>{{ end }}
+{{ define "main" }}
+<main id="page-main" class="flex-shrink-0">
     <section id="title" class="position-relative">
         <div class="position-absolute top-50 start-50 translate-middle text-center">
             <img class="img-responsive rounded-circle" id="avatar" src="https://avatars.githubusercontent.com/u/2760449?v=4" alt="Dylan Gore Avatar"><br>
@@ -66,13 +66,12 @@
         </div>
         <div class="row">
             <div class="col-12 text-center">
-                <a href="https://github.com/DylanGore" target="_blank" class="btn btn-dark-accent mx-2" name="GitHub" role="button" aria-label="GitHub"><span class="iconify-inline" data-icon="mdi:github"></span></a>
-                <a href="https://twitter.com/DylanGore" target="_blank" class="btn btn-dark-accent mx-2" name="Twitter" role="button" aria-label="Twitter"><span class="iconify-inline" data-icon="mdi:twitter"></span></a>
-                <a href="https://www.linkedin.com/in/dylangore/" target="_blank" class="btn btn-dark-accent mx-2" name="LinkedIn" role="button" aria-label="LinkedIn"><span class="iconify-inline" data-icon="mdi:linkedin"></span></a>
-                <a href="mailto:hello@dylangore.ie" target="_blank" class="btn btn-dark-accent mx-2" name="E-Mail" role="button" aria-label="E-Mail"><span class="iconify-inline" data-icon="mdi:email"></span></a>
+                <a href="https://github.com/DylanGore" target="_blank" class="btn btn-dark-accent mx-2" name="GitHub" role="button" aria-label="GitHub" rel="noopener"><span class="iconify-inline" data-icon="mdi:github"></span></a>
+                <a href="https://twitter.com/DylanGore" target="_blank" class="btn btn-dark-accent mx-2" name="Twitter" role="button" aria-label="Twitter" rel="noopener"><span class="iconify-inline" data-icon="mdi:twitter"></span></a>
+                <a href="https://www.linkedin.com/in/dylangore/" target="_blank" class="btn btn-dark-accent mx-2" name="LinkedIn" role="button" aria-label="LinkedIn" rel="noopener"><span class="iconify-inline" data-icon="mdi:linkedin"></span></a>
+                <a href="mailto:hello@dylangore.ie" target="_blank" class="btn btn-dark-accent mx-2" name="E-Mail" role="button" aria-label="E-Mail" rel="noopener"><span class="iconify-inline" data-icon="mdi:email"></span></a>
             </div>
         </div>
     </section>
 </main>
-
-{{ partial "footer" . }}
+{{ end }}

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}" class="h-100">
+
+{{partial "head" . }}
+
+<body class="d-flex flex-column h-100">
+    {{ block "header" . }}{{ partial "header" . }}{{ end }}
+    {{ block "main" . }}{{ end }}
+    {{ partial "footer" . }}
+
+    <!-- Boostrap JS & Popper -->
+    {{ $bootstrapJS := resources.Get "js/bootstrap/bootstrap.bundle.min.js" | resources.Minify}}
+    <script src="{{ $bootstrapJS.Permalink }}"></script>
+</body>
+
+</html>
