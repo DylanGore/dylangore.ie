@@ -1,4 +1,5 @@
-baseURL = "https://dylangore.github.io/dylangore.ie/"
+# baseURL = "https://dylangore.github.io/dylangore.ie/"
+baseURL = "https://dylangore.ie/"
 languageCode = "en-ie"
 title = "Dylan Gore"
 theme = "dylangore"
@@ -25,13 +26,13 @@ enableEmoji = true
 #     weight = 4
 
 [sitemap]
-  filename = "sitemap.xml"
+filename = "sitemap.xml"
 
 # Assets
 [module]
-  [[module.mounts]]
-    source = "node_modules/bootstrap/scss"
-    target = "./assets/sass/bootstrap"
-  [[module.mounts]]
-    source = "node_modules/bootstrap/dist/js"
-    target = "./assets/js/bootstrap"
+[[module.mounts]]
+source = "node_modules/bootstrap/scss"
+target = "./assets/sass/bootstrap"
+[[module.mounts]]
+source = "node_modules/bootstrap/dist/js"
+target = "./assets/js/bootstrap"
