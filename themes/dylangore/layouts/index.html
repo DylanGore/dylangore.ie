@@ -5,7 +5,21 @@
         <div class="position-absolute top-50 start-50 translate-middle text-center">
             <img class="img-responsive rounded-circle" id="avatar" src="{{ .Site.BaseURL }}img/avatar.jpg" alt="Dylan Gore Avatar"><br>
             <h1 class="mt-2">Dylan Gore</h1>
-            <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias saepe quod necessitatibus ipsa voluptates in modi inventore, maxime quisquam quis est asperiores et dicta, nemo nisi doloribus adipisci minus numquam?</p>
+            <p class="lead">B.Sc. (Hons.) in the Internet of Things<br /> IT Resident @ {{partial "logo-google" . }} <br /> Ireland</p>
+            <ul id="skills">
+                <li><span class="iconify-inline" data-icon="mdi:language-html5"></span> HTML</li>
+                <li><span class="iconify-inline" data-icon="mdi:language-css3"></span> CSS/SCSS</li>
+                <li><span class="iconify-inline" data-icon="mdi:language-javascript"></span> JavaScript</li>
+                <li><span class="iconify-inline" data-icon="mdi:language-python"></span> Python</li>
+                <li><span class="iconify-inline" data-icon="mdi:language-java"></span> Java</li>
+                <li><span class="iconify-inline" data-icon="mdi:language-kotlin"></span> Kotlin</li>
+                <li><span class="iconify-inline" data-icon="mdi:android"></span> Android</li>
+                <li><span class="iconify-inline" data-icon="mdi:nodejs"></span> NodeJS</li>
+                <li><span class="iconify-inline" data-icon="mdi:vuejs"></span> Vue.js</li>
+                <li><span class="iconify-inline" data-icon="mdi:database"></span> SQL/NoSQL</li>
+                <li><span class="iconify-inline" data-icon="mdi:ansible"></span> Ansible</li>
+                <li><span class="iconify-inline" data-icon="mdi:linux"></span> Linux</li>
+            </ul>
             <br>
             <a href="#projects" id="scroll-btn" title="Scroll to Projects section">
                 <span class="iconify-inline" data-icon="mdi:chevron-down"></span>
@@ -18,11 +32,10 @@
             {{ range  first 9 (where .Site.RegularPages "Section" "projects") }}
             <div class="col-sm-12 col-md-6 col-lg-4 mt-4">
                 <div class="card bg-dark-accent">
-                    <div class="card-body">
+                    <a class="card-body project-link" href="{{ .Params.sourceURL }}" target="_blank" title="GitHub: {{ .Title }}" rel="noopener">
                         <h3 class="card-title">{{ .Title }}</h3>
                         <p class="card-text">{{ .Summary | truncate 120 }}</p>
-                        <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
-                    </div>
+                    </a>
                     <div class="card-footer">
                         {{ if isset .Params "contributors" }}
                         <a href="{{ .Params.sourceURL }}/graphs/contributors" name="GitHub Contributors">
@@ -59,11 +72,11 @@
     </section>
     <section id="contact" class="container">
         <h2 class="pt-2">Contact</h2>
-        <div class="row">
+        <!-- <div class="row">
             <div class="col-12">
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam, aliquam, exercitationem amet itaque modi nesciunt labore in molestias consequuntur et repudiandae voluptatum neque autem eum vero quas fugiat? Quas, laboriosam!</p>
             </div>
-        </div>
+        </div> -->
         <div class="row">
             <div class="col-12 text-center">
                 <a href="https://github.com/DylanGore" target="_blank" class="btn btn-dark-accent mx-2" name="GitHub" role="button" aria-label="GitHub" rel="noopener"><span class="iconify-inline" data-icon="mdi:github"></span></a>

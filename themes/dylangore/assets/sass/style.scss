@@ -22,6 +22,7 @@ html, body {
   width: 2em;
   height: 2em;
   font-size: 4em;
+  color: inherit;
 }
 
 #projects .card {
@@ -49,3 +50,47 @@ html, body {
 #page-main {
   margin-bottom: 2em;
 }
+
+ul#skills {
+  margin: auto;
+  padding: 0;
+  margin-top: 2em;
+  display: grid;
+  font-size: 0.9em;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1em;
+  list-style-type: none;
+  padding-bottom: 2.5em;
+}
+ul#skills > li {
+  padding: 4%;
+  font-size: 1.2em;
+  width: 100%;
+  align-self: center;
+  justify-self: center;
+}
+
+.project-link, .project-link:hover{
+  text-decoration: none;
+  color: inherit;
+}
+
+// .google-b {
+//   font-weight: bold;
+//   color: #4285f4;
+// }
+
+// .google-g {
+//   font-weight: bold;
+//   color: #34a853
+// }
+
+// .google-y {
+//   font-weight: bold;
+//   color: #fbbc05;
+// }
+
+// .google-r {
+//   font-weight: bold;
+//   color: #ea4335;
+// }
